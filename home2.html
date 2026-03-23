@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home 2 | The Bookora</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="images\logo.png">
+
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        /* Smooth entry animation */
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        /* Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Navbar & Menu Styles */
+        .nav-link { position: relative; }
+        .nav-link::after {
+          content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
+          background: #eda726; transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+        #mobileMenu.hidden { display: none; }
+        #mobileMenu:not(.hidden) { display: flex; }
+        body.menu-open { overflow: hidden; }
+
+        /* Hover Reveal for Collection Cards */
+        .collection-card:hover .collection-overlay { opacity: 1; }
+        .collection-card:hover img { transform: scale(1.05); }
+        @media(max-width:420px){
+            .search{
+                display:none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-[#1a1612] transition-colors duration-500 bg-texture">
+    
+    <div id="navbar"></div>
+
+
+    <section class="relative w-full h-[100svh] flex items-center justify-center pt-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="images\bg2.avif" alt="Library" class="w-full h-full object-cover filter grayscale-[30%]" />
+        <div class="absolute inset-0 bg-black/60 dark:bg-black/80"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center animate-fade-up">
+        <span class="text-marigold font-bold uppercase tracking-[0.4em] text-xs mb-6 block">Est. 2026 • Literary Sanctuary</span>
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-black text-white leading-[1.1] mb-8 font-serif-elegant">
+          Lose Yourself in <br/> <span class="text-marigold italic font-normal">A Good Story.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 font-serif-elegant italic mb-12 max-w-2xl mx-auto">
+          Explore curated collections, attend intimate author gatherings, and connect with a community that shares your passion for the written word.
+        </p>
+        
+        <div class="search bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-full inline-flex flex-col sm:flex-row items-center gap-2 max-w-xl w-full mx-auto">
+            <input type="text" placeholder="Search by title, author, or genre..." class="bg-transparent text-white placeholder-gray-300 px-6 py-3 w-full focus:outline-none font-serif-elegant italic text-sm">
+            <button class="bg-marigold text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs w-full sm:w-auto hover:bg-white hover:text-black transition-colors">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-cream dark:bg-[#1a1612] transition-colors duration-500 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="relative flex justify-center lg:justify-end pr-0 lg:pr-10 group">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-marigold/20 rounded-full blur-3xl z-0"></div>
+                    
+                    <img src="images\img12.avif" 
+     alt="Book of the month" 
+     class="relative z-10 w-full max-w-lg aspect-[4/3] object-cover group-hover:-translate-y-2 transition-transform duration-500">
+
+                </div>
+
+                <div class="flex flex-col items-start text-left z-10">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i class="fas fa-star text-marigold text-xs"></i>
+                        <span class="uppercase tracking-[0.25em] text-xs font-bold text-antgold">Featured Read of the Month</span>
+                    </div>
+                    <h2 class="text-4xl sm:text-5xl font-bold font-serif-elegant text-black dark:text-white mb-2">The Midnight Library</h2>
+                    <h3 class="text-xl font-serif-elegant italic text-gray-500 dark:text-gray-400 mb-6">by Matt Haig</h3>
+                    
+                    <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-sans">
+                        Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets?
+                    </p>
+
+                    <div class="bg-white dark:bg-[#12100d] border-l-4 border-marigold p-6 mb-8 w-full shadow-sm">
+                        <p class="text-sm font-serif-elegant italic text-gray-800 dark:text-gray-200">
+                            "A beautiful fable, an It's a Wonderful Life for the modern age. It makes you realize that the life you have is perfectly fine."
+                        </p>
+                    </div>
+
+                   
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-[#0a0a0a] border-y border-antgold/20 transition-colors duration-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-serif-elegant text-black dark:text-white mb-4">Gatherings at The Inkwell</span></h2>
+                <p class="text-gray-500 uppercase tracking-widest text-xs font-bold">Join the Conversation</p>
+            </div>
+
+            <div class="flex flex-col border-t border-gray-200 dark:border-gray-800">
+                
+                <div class="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 dark:border-gray-800 group hover:bg-cream dark:hover:bg-[#12100d] transition-colors px-4 cursor-pointer">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 mb-4 md:mb-0">
+                        <div class="flex flex-col">
+                            <span class="text-marigold font-black text-2xl">12</span>
+                            <span class="text-gray-500 uppercase tracking-widest text-xs font-bold">October</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif-elegant font-bold text-black dark:text-white group-hover:text-marigold transition-colors">Poetry Open Mic Night</h3>
+                            <p class="text-sm text-gray-500 italic mt-1"><i class="fas fa-map-marker-alt mr-2"></i>The Events Gallery • 7:00 PM</p>
+                        </div>
+                    </div>
+                    <button class="px-6 py-2 border border-black dark:border-white text-black dark:text-white text-xs font-bold uppercase tracking-widest group-hover:bg-marigold group-hover:text-white group-hover:border-marigold transition-all">RSVP</button>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 dark:border-gray-800 group hover:bg-cream dark:hover:bg-[#12100d] transition-colors px-4 cursor-pointer">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 mb-4 md:mb-0">
+                        <div class="flex flex-col">
+                            <span class="text-marigold font-black text-2xl">15</span>
+                            <span class="text-gray-500 uppercase tracking-widest text-xs font-bold">October</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif-elegant font-bold text-black dark:text-white group-hover:text-marigold transition-colors">Local Authors Book Club</h3>
+                            <p class="text-sm text-gray-500 italic mt-1"><i class="fas fa-map-marker-alt mr-2"></i>The Reading Room • 6:30 PM</p>
+                        </div>
+                    </div>
+                    <button class="px-6 py-2 border border-black dark:border-white text-black dark:text-white text-xs font-bold uppercase tracking-widest group-hover:bg-marigold group-hover:text-white group-hover:border-marigold transition-all">RSVP</button>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-gray-200 dark:border-gray-800 group hover:bg-cream dark:hover:bg-[#12100d] transition-colors px-4 cursor-pointer">
+                    <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 mb-4 md:mb-0">
+                        <div class="flex flex-col">
+                            <span class="text-marigold font-black text-2xl">22</span>
+                            <span class="text-gray-500 uppercase tracking-widest text-xs font-bold">October</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-serif-elegant font-bold text-black dark:text-white group-hover:text-marigold transition-colors">Creative Writing Workshop</h3>
+                            <p class="text-sm text-gray-500 italic mt-1"><i class="fas fa-map-marker-alt mr-2"></i>The Inkwell Café • 10:00 AM</p>
+                        </div>
+                    </div>
+                    <button class="px-6 py-2 border border-black dark:border-white text-black dark:text-white text-xs font-bold uppercase tracking-widest group-hover:bg-marigold group-hover:text-white group-hover:border-marigold transition-all">RSVP</button>
+                </div>
+
+            </div>
+
+          
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-cream dark:bg-[#1a1612] transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+           <div class="flex flex-col items-center justify-center text-center mb-16 gap-6 border-b border-antgold/20 pb-6">
+    <div>
+        <h2 class="text-4xl md:text-5xl font-bold font-serif-elegant text-black dark:text-white mb-2">
+            Browse by Curation
+        </h2>
+        <p class="text-xs font-sans uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 font-bold">
+            Hand-selected collections
+        </p>
+    </div>
+</div>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                
+                <a href="#" class="group relative block aspect-[3/4] overflow-hidden bg-black shadow-lg">
+                    <img src="images\img6.avif" alt="Fiction" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-50">
+                    
+                    <div class="absolute inset-5 border border-white/20 z-10 transition-colors duration-700 group-hover:border-marigold/80 pointer-events-none"></div>
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-10 flex flex-col justify-end">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-4">
+                            <span class="text-marigold font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">01 — Literature</span>
+                            
+                            <h3 class="text-3xl lg:text-4xl font-serif-elegant font-bold text-white tracking-wide mb-2">Fiction</h3>
+                            
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-300 font-serif-elegant italic text-sm leading-relaxed mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                                        Lose yourself in award-winning contemporary literature and timeless classics.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative block aspect-[3/4] overflow-hidden bg-black shadow-lg">
+                    <img src="images\img7.avif" alt="Rare Finds" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-50">
+                    
+                    <div class="absolute inset-5 border border-white/20 z-10 transition-colors duration-700 group-hover:border-antgold/80 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-10 flex flex-col justify-end">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-4">
+                            <span class="text-antgold font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">02 — Collectors</span>
+                            
+                            <h3 class="text-3xl lg:text-4xl font-serif-elegant font-bold text-white tracking-wide mb-2">Rare Finds</h3>
+                            
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-300 font-serif-elegant italic text-sm leading-relaxed mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                                        First editions, signed copies, and out-of-print treasures for the discerning collector.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="group relative block aspect-[3/4] overflow-hidden bg-black shadow-lg">
+                    <img src="images\img2.avif" alt="Poetry & Art" 
+                         class="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-50">
+                    
+                    <div class="absolute inset-5 border border-white/20 z-10 transition-colors duration-700 group-hover:border-marigold/80 pointer-events-none"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div class="absolute inset-0 z-20 p-10 flex flex-col justify-end">
+                        <div class="transform transition-transform duration-500 group-hover:-translate-y-4">
+                            <span class="text-marigold font-bold uppercase tracking-[0.2em] text-[10px] mb-3 block opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">03 — Expression</span>
+                            
+                            <h3 class="text-3xl lg:text-4xl font-serif-elegant font-bold text-white tracking-wide mb-2">Poetry & Art</h3>
+                            
+                            <div class="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-all duration-500 ease-in-out">
+                                <div class="overflow-hidden">
+                                    <p class="text-gray-300 font-serif-elegant italic text-sm leading-relaxed mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150">
+                                        Verses that move the soul, alongside stunning coffee-table photography books.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+<section class="py-24 md:py-32 bg-white dark:bg-black  duration-500 border-t border-antgold/20 ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                  <div class="flex flex-col items-center text-center">
+    
+    <div class="flex items-center justify-center space-x-3 mb-4">
+        <span class="w-8 h-[2px] bg-marigold"></span>
+        <span class="uppercase tracking-[0.25em] text-[10px] font-bold text-antgold font-sans">
+            The Inkwell Journal
+        </span>
+    </div>
+
+    <h2 class="text-4xl md:text-5xl font-bold font-serif-elegant text-black dark:text-white mb-2">
+        Latest Dispatches
+    </h2>
+
+
+            </div>
+
+            <div class="grid grid-cols-1 mt-10 lg:grid-cols-12 gap-12 lg:gap-16">
+                
+                <div class="lg:col-span-7 flex flex-col group cursor-pointer">
+                    <div class="relative aspect-[4/3] overflow-hidden mb-8 shadow-lg">
+                        <div class="absolute top-4 left-4 bg-marigold text-white text-[9px] font-bold uppercase tracking-widest px-3 py-1.5 z-20 font-sans shadow-md">
+                            Author Interview
+                        </div>
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                        <img src="images\img8.avif" 
+                             alt="Person writing in a journal" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale-[10%] group-hover:grayscale-0">
+                    </div>
+                   
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    
+                    <div class="flex items-start gap-6 group cursor-pointer border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <div class="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 overflow-hidden shadow-md">
+                            <img src="images\img9.avif" 
+                                 alt="Coffee and a book" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-marigold font-bold uppercase tracking-widest text-[9px] font-sans mb-2">Book Reviews</span>
+                            <h4 class="text-lg sm:text-xl font-serif-elegant font-bold text-black dark:text-white mb-2 group-hover:text-marigold transition-colors line-clamp-2">
+                                10 Modern Classics to Read by the Fireplace
+                            </h4>
+                            <p class="text-gray-500 font-sans text-[10px] uppercase tracking-widest font-bold">Oct 14 • 3 Min Read</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group cursor-pointer border-b border-gray-200 dark:border-gray-800 pb-8">
+                        <div class="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 overflow-hidden shadow-md">
+                            <img src="images\img10.avif" 
+                                 alt="Stack of old books" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-marigold font-bold uppercase tracking-widest text-[9px] font-sans mb-2">Curator's Notes</span>
+                            <h4 class="text-lg sm:text-xl font-serif-elegant font-bold text-black dark:text-white mb-2 group-hover:text-marigold transition-colors line-clamp-2">
+                                Preserving History: How We Source Our Rare Collections
+                            </h4>
+                            <p class="text-gray-500 font-sans text-[10px] uppercase tracking-widest font-bold">Oct 08 • 7 Min Read</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-6 group cursor-pointer">
+                        <div class="relative w-28 h-28 sm:w-32 sm:h-32 shrink-0 overflow-hidden shadow-md">
+                            <img src="images\img5.avif" 
+                                 alt="People chatting in cafe" 
+                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-marigold font-bold uppercase tracking-widest text-[9px] font-sans mb-2">Community</span>
+                            <h4 class="text-lg sm:text-xl font-serif-elegant font-bold text-black dark:text-white mb-2 group-hover:text-marigold transition-colors line-clamp-2">
+                                Recap: The September Local Poetry Slam
+                            </h4>
+                            <p class="text-gray-500 font-sans text-[10px] uppercase tracking-widest font-bold">Oct 02 • 4 Min Read</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="bg-marigold py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10 bg-white/10 p-10 md:p-16 ">
+                
+                <div class="text-center md:text-left max-w-xl">
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif-elegant text-white mb-4">Join <span class="italic">The Bookora Circle</span></h2>
+                    <p class="text-white/90 font-serif-elegant italic text-lg leading-relaxed">
+                        Sign up for our newsletter to receive invitations to private readings, early access to rare book drops, and 10% off your first purchase in the Café.
+                    </p>
+                </div>
+
+                <div class="w-full max-w-md">
+                    <form class="flex flex-col gap-4">
+                        <input type="email" placeholder="Enter your email address..." class="w-full px-6 py-4 bg-white text-black font-sans focus:outline-none focus:ring-4 focus:ring-black/20 shadow-inner">
+                        <button type="submit" class="w-full px-6 py-4 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-antgold transition-colors font-sans">Become a Member</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- NAVBAR LOGIC ---
+        const homeBtn = document.getElementById("homeBtn");
+        const homeMenu = document.getElementById("homeMenu");
+        const mobileBtn = document.getElementById("mobileBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileIcon = document.getElementById("mobileIcon");
+        const mobileHomeBtn = document.getElementById("mobileHomeBtn");
+        const mobileHomeMenu = document.getElementById("mobileHomeMenu");
+        const mobileHomeIcon = document.getElementById("mobileHomeIcon");
+
+        homeBtn?.addEventListener("click", (e) => { e.stopPropagation(); homeMenu?.classList.toggle("hidden"); });
+        mobileHomeBtn?.addEventListener("click", () => {
+          const isHidden = mobileHomeMenu.classList.toggle("hidden");
+          mobileHomeIcon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
+        });
+
+        mobileBtn.onclick = () => {
+          const isHidden = mobileMenu.classList.toggle("hidden");
+          document.body.classList.toggle("menu-open");
+          mobileIcon.className = isHidden ? "fas fa-bars text-2xl" : "fas fa-times text-2xl";
+        };
+
+        document.addEventListener("click", () => homeMenu?.classList.add("hidden"));
+
+        // --- THEME LOGIC ---
+        const themeToggles = [document.getElementById("darkToggle"), document.getElementById("mobileDarkToggle")];
+        const updateIcons = (isDark) => {
+          const iconClass = isDark ? "fas fa-sun" : "fas fa-moon";
+          if (document.getElementById("darkIcon")) document.getElementById("darkIcon").className = iconClass;
+          if (document.getElementById("mobileDarkIcon")) document.getElementById("mobileDarkIcon").className = iconClass + " text-lg";
+        };
+
+        themeToggles.forEach(btn => btn?.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem("bookora-dark", isDark);
+          updateIcons(isDark);
+        }));
+
+        // --- RTL LOGIC ---
+        const rtlToggles = [document.getElementById("rtlToggle"), document.getElementById("mobileRtlToggle")];
+        rtlToggles.forEach(btn => btn?.addEventListener("click", () => {
+          const isRtl = document.documentElement.dir === "rtl";
+          document.documentElement.dir = isRtl ? "ltr" : "rtl";
+        }));
+
+        if (localStorage.getItem("bookora-dark") === "true") {
+          document.documentElement.classList.add("dark");
+          updateIcons(true);
+        }
+      });
+    </script>
+    <script src="footer.js"></script>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

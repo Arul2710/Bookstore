@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="images\logo.png">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Infinite Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 30s linear infinite;
+        }
+
+        /* Hover Zoom for Bento Box */
+        .bento-image { transition: transform 0.7s ease; }
+        .bento-card:hover .bento-image { transform: scale(1.05); }
+
+        /* Tactile Button */
+        .book-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+            transition: all 0.3s ease;
+        }
+        .dark .book-btn { border-color: #C2A878; box-shadow: 4px 4px 0px 0px #eda726; }
+        .book-btn:hover { transform: translate(4px, 4px); box-shadow: 0px 0px 0px 0px transparent; }
+        @media(max-width:420px){
+            .topic{
+                    margin-right: 45px !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 ">
+    
+    <div id="navbar"></div>
+
+    <section class="relative w-full min-h-[90svh] pt-24 px-4 md:px-8 pb-8 flex flex-col items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center  opacity-50"
+     style="background-image: url('images/img17.avif');">
+</div>
+            
+            <div class="absolute inset-0">
+                <img src="images\bg4.avif" 
+                     alt="Vintage Typewriter" 
+                     class="w-full h-full object-cover  opacity-50">
+            </div>
+
+            <div class="relative z-10 bg-cream/95 dark:bg-[#12100d]/95 backdrop-blur-md p-10 md:p-16 lg:p-20 text-center max-w-3xl mx-4 border border-antgold/20 shadow-xl">
+                <span class="text-marigold font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-6 block font-sans">
+                    The Authors' Guild
+                </span>
+                
+                <h1 class="text-5xl md:text-7xl font-serif-elegant font-bold text-ink dark:text-white leading-[1.1] mb-6 tracking-tight">
+                    Master the <br>
+                    <span class="italic font-normal text-marigold">Written Word.</span>
+                </h1>
+                
+                <p class="text-gray-600 dark:text-gray-400 text-sm md:text-base leading-relaxed font-sans mb-10 max-w-lg mx-auto">
+                    Immersive writing workshops, poetry seminars, and traditional bookbinding classes led by industry professionals in the heart of our sanctuary.
+                </p>
+
+                <a href="blog.html" class="inline-block bg-ink text-cream dark:bg-white dark:text-ink px-10 py-4 font-bold uppercase tracking-widest text-[10px] hover:bg-marigold dark:hover:bg-marigold transition-colors">
+                    Explore Syllabus
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+ 
+
+    <section class="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif-elegant font-bold text-ink dark:text-white mb-4">Our Disciplines</h2>
+            <p class="text-xs uppercase tracking-widest text-antgold font-bold font-sans">Choose your craft</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+            
+            <a href="#" class="bento-card md:col-span-2 relative overflow-hidden group border border-antgold/20 bg-ink">
+                <img src="images\img2.avif" class="bento-image absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[30%]">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8">
+                    <span class="bg-marigold text-ink px-3 py-1 text-[9px] font-bold uppercase tracking-widest mb-3 inline-block">Most Popular</span>
+                    <h3 class="text-3xl font-serif-elegant font-bold text-white mb-2">Fiction & Narrative</h3>
+                    <p class="text-gray-300 text-sm max-w-md hidden sm:block">Master pacing, dialogue, and character arcs in our multi-week intensive courses.</p>
+                </div>
+            </a>
+
+            <a href="#" class="bento-card relative overflow-hidden group border border-antgold/20 bg-ink">
+                <img src="images\img3.avif" class="bento-image absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[30%]">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="text-2xl font-serif-elegant font-bold text-white mb-2">Poetry & Verse</h3>
+                    <p class="text-gray-300 text-xs">Rhythm, meter, and spoken word.</p>
+                </div>
+            </a>
+
+            <a href="#" class="bento-card relative overflow-hidden group border border-antgold/20 bg-ink">
+                <img src="images\img6.avif" class="bento-image absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[30%]">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="text-2xl font-serif-elegant font-bold text-white mb-2">Bookbinding</h3>
+                    <p class="text-gray-300 text-xs">The tactile art of physical books.</p>
+                </div>
+            </a>
+
+            <a href="#" class="bento-card md:col-span-2 relative overflow-hidden group border border-antgold/20 bg-ink">
+                <img src="images\img17.avif" class="bento-image absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[30%]">
+                <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+                <div class="absolute bottom-8 left-8">
+                    <h3 class="text-3xl font-serif-elegant font-bold text-white mb-2">The Publishing Path</h3>
+                    <p class="text-gray-300 text-sm max-w-md hidden sm:block">Seminars on querying agents, editing drafts, and understanding the modern literary market.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="syllabus" class="py-24 bg-white dark:bg-[#12100d] border-y border-antgold/20 transition-colors duration-500">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-ink dark:border-white pb-6">
+                <h2 class="topic text-3xl md:text-5xl  font-serif-elegant font-bold text-ink dark:text-white">Upcoming Sessions</h2>
+            </div>
+
+            <div class="flex flex-col">
+                
+                <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-antgold/30 hover:bg-cream dark:hover:bg-ink transition-colors px-4">
+                    <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                        <span class="text-marigold font-bold text-xl block mb-1">Oct 12 — 26</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">3 Weeks (Thursdays)</span>
+                    </div>
+                    <div class="w-full md:w-1/2 mb-6 md:mb-0 pr-4">
+                        <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-2 group-hover:text-antgold transition-colors">The Art of the Short Story</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Pacing, flash fiction, and emotional resonance.</p>
+                    </div>
+                    <div class="w-full md:w-1/4 text-left md:text-right flex flex-col md:items-end">
+                        <span class="text-lg font-serif-elegant font-bold text-ink dark:text-white mb-2">$150.00</span>
+                        <button class="text-[10px] font-bold uppercase tracking-widest text-marigold border-b border-marigold hover:text-ink dark:hover:text-white transition-colors">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-antgold/30 hover:bg-cream dark:hover:bg-ink transition-colors px-4">
+                    <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                        <span class="text-marigold font-bold text-xl block mb-1">Nov 02</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">One Day Intensive</span>
+                    </div>
+                    <div class="w-full md:w-1/2 mb-6 md:mb-0 pr-4">
+                        <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-2 group-hover:text-antgold transition-colors">Memoir & Vulnerability</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Extracting truth from memory without losing your voice.</p>
+                    </div>
+                    <div class="w-full md:w-1/4 text-left md:text-right flex flex-col md:items-end">
+                        <span class="text-lg font-serif-elegant font-bold text-gray-400 mb-2">Sold Out</span>
+                        <button class="text-[10px] font-bold uppercase tracking-widest text-gray-500 border-b border-gray-500 hover:text-ink dark:hover:text-white transition-colors">Waitlist</button>
+                    </div>
+                </div>
+
+                <div class="group flex flex-col md:flex-row md:items-center justify-between py-8 border-b border-antgold/30 hover:bg-cream dark:hover:bg-ink transition-colors px-4">
+                    <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                        <span class="text-marigold font-bold text-xl block mb-1">Nov 15 — 16</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-widest">Weekend Workshop</span>
+                    </div>
+                    <div class="w-full md:w-1/2 mb-6 md:mb-0 pr-4">
+                        <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-2 group-hover:text-antgold transition-colors">Heritage Bookbinding</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Learn Coptic stitching, paper folding, and leather pressing.</p>
+                    </div>
+                    <div class="w-full md:w-1/4 text-left md:text-right flex flex-col md:items-end">
+                        <span class="text-lg font-serif-elegant font-bold text-ink dark:text-white mb-2">$120.00</span>
+                        <button class="text-[10px] font-bold uppercase tracking-widest text-marigold border-b border-marigold hover:text-ink dark:hover:text-white transition-colors">Enroll Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-24 md:py-32 lg:py-40 bg-cream dark:bg-ink transition-colors duration-500 overflow-hidden border-y border-antgold/20 ">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+
+      <div class="lg:col-span-8 flex flex-col">
+        
+       <div class="mb-12 flex flex-col items-center text-center">
+    
+  <div class="flex items-center justify-center space-x-3 mb-4">
+    <span class="w-8 h-[2px] bg-marigold"></span>
+    <span class="uppercase tracking-[0.2em] text-[10px] font-bold text-antgold font-sans">
+      Visiting Masters
+    </span>
+  </div>
+
+  <h2 class="text-4xl md:text-5xl font-bold font-serif-elegant text-ink dark:text-white tracking-tight mb-6">
+    The Guest Lectures
+  </h2>
+
+  <p class="text-sm md:text-base font-medium text-gray-600 dark:text-gray-400 font-sans leading-relaxed max-w-xl">
+    We regularly invite celebrated voices from the literary world to host exclusive, one-time masterclasses and intimate seminars.
+  </p>
+
+</div>
+
+
+        <div class="flex flex-col border-t border-antgold/30">
+          
+          <div class="group flex flex-col md:flex-row md:items-center py-8 border-b border-antgold/30 hover:bg-white/50 dark:hover:bg-white/5 transition-colors cursor-default px-4 -mx-4 md:mx-0">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 mb-4 md:mb-0 md:mr-6 border border-antgold/40">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop" alt="David Chen" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="flex-grow mb-4 md:mb-0 pr-4">
+              <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-ink dark:text-white mb-1 group-hover:text-marigold transition-colors">David Chen</h3>
+              <p class="text-[10px] uppercase tracking-widest text-antgold font-bold font-sans">Pulitzer Prize Finalist</p>
+            </div>
+            <div class="w-full md:w-1/3 flex flex-col md:items-end md:text-right">
+              <p class="text-sm font-serif-elegant italic text-ink dark:text-gray-300 mb-2">The Art of the Novella</p>
+              <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-marigold transition-colors flex items-center gap-2">
+                View Seminar <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="group flex flex-col md:flex-row md:items-center py-8 border-b border-antgold/30 hover:bg-white/50 dark:hover:bg-white/5 transition-colors cursor-default px-4 -mx-4 md:mx-0">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 mb-4 md:mb-0 md:mr-6 border border-antgold/40">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" alt="Evelyn Sinclair" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="flex-grow mb-4 md:mb-0 pr-4">
+              <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-ink dark:text-white mb-1 group-hover:text-marigold transition-colors">Evelyn Sinclair</h3>
+              <p class="text-[10px] uppercase tracking-widest text-antgold font-bold font-sans">NYT Bestselling Novelist</p>
+            </div>
+            <div class="w-full md:w-1/3 flex flex-col md:items-end md:text-right">
+              <p class="text-sm font-serif-elegant italic text-ink dark:text-gray-300 mb-2">Era Authenticity</p>
+              <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-marigold transition-colors flex items-center gap-2">
+                View Seminar <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="group flex flex-col md:flex-row md:items-center py-8 border-b border-antgold/30 hover:bg-white/50 dark:hover:bg-white/5 transition-colors cursor-default px-4 -mx-4 md:mx-0">
+            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 mb-4 md:mb-0 md:mr-6 border border-antgold/40">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=400&auto=format&fit=crop" alt="Marcus Holloway" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500">
+            </div>
+            <div class="flex-grow mb-4 md:mb-0 pr-4">
+              <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-ink dark:text-white mb-1 group-hover:text-marigold transition-colors">Marcus Holloway</h3>
+              <p class="text-[10px] uppercase tracking-widest text-antgold font-bold font-sans">Literary Agent</p>
+            </div>
+            <div class="w-full md:w-1/3 flex flex-col md:items-end md:text-right">
+              <p class="text-sm font-serif-elegant italic text-ink dark:text-gray-300 mb-2">Demystifying Publishing</p>
+              <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-marigold transition-colors flex items-center gap-2">
+                View Seminar <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="lg:col-span-4 lg:sticky lg:top-32">
+        <div class="bg-white dark:bg-[#12100d] border border-antgold/30 shadow-2xl p-6 md:p-8 flex flex-col items-center text-center relative overflow-hidden group">
+          
+          <div class="absolute -top-16 -right-16 w-32 h-32 bg-marigold/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <span class="bg-ink text-marigold dark:bg-white dark:text-ink px-4 py-1 text-[9px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+            Current Writer in Residence
+          </span>
+
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6 border-4 border-cream dark:border-ink shadow-lg z-10">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" alt="Sarah Jenkins" class="w-full h-full object-cover">
+          </div>
+
+          <h3 class="text-2xl font-bold font-serif-elegant text-ink dark:text-white mb-2 z-10">Sarah Jenkins</h3>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold font-sans mb-6 z-10">National Book Award Winner</p>
+          
+          <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8 italic z-10">
+            Sarah is spending the Fall season with us. She is currently offering limited 1-on-1 manuscript critiques in the private reading rooms.
+          </p>
+
+          <a href="#" class="w-full py-4 border-2 border-ink dark:border-white text-ink dark:text-white text-[10px] font-bold uppercase tracking-widest hover:bg-marigold hover:border-marigold hover:text-ink transition-colors duration-300 z-10">
+            Book a Critique Session
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+   <section class="py-16 md:py-24 bg-white dark:bg-ink transition-colors duration-500 border-y border-antgold/20 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            <div class="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
+                <div class="w-16 h-16 border border-antgold/40 rounded-full flex items-center justify-center mb-6 bg-white/50 dark:bg-black/10 backdrop-blur-sm">
+                    <i class="fas fa-award text-2xl text-marigold"></i>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl font-serif-elegant font-bold text-ink dark:text-white mb-4 tracking-tight">
+                    Official Certification
+                </h3>
+                
+                <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed max-w-md mb-8">
+                    Upon completing our multi-week intensives, writers receive a formal certificate of completion. This certification is widely recognized by our literary partners, publishing houses, and esteemed MFA programs.
+                </p>
+                
+                <a href="#" class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-marigold hover:text-ink dark:hover:text-white transition-colors border-b border-marigold pb-1">
+                    View Requirements <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <div class="lg:col-span-7 lg:border-l border-antgold/30 lg:pl-16 flex flex-col justify-center mt-8 lg:mt-0">
+                
+                <span class="text-[10px] uppercase tracking-[0.25em] font-bold text-antgold mb-8 text-center lg:text-left font-sans">
+                    Recognized & Accredited By
+                </span>
+                
+                <div class="flex flex-wrap justify-center lg:justify-start items-center gap-8 md:gap-12 opacity-60 hover:opacity-100 transition-opacity duration-500">
+                    
+                    <span class="font-serif-elegant text-lg md:text-xl text-ink dark:text-white tracking-widest uppercase">
+                        The Authors Guild
+                    </span>
+                    
+                    <span class="font-sans text-xl md:text-2xl font-black tracking-tighter text-ink dark:text-white">
+                        PENGUIN
+                    </span>
+                    
+                    <span class="font-serif-elegant text-xl md:text-2xl italic text-ink dark:text-white tracking-wide">
+                        Columbia MFA
+                    </span>
+                    
+                    <span class="font-sans text-sm md:text-base font-medium tracking-[0.3em] uppercase text-ink dark:text-white">
+                        Macmillan
+                    </span>
+                    
+                    <span class="font-serif-elegant text-lg md:text-xl font-bold text-ink dark:text-white">
+                        The Paris Review
+                    </span>
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <section class="py-24 bg-marigold text-ink text-center relative overflow-hidden">
+        
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto px-6">
+            <i class="fas fa-pen-fancy text-4xl mb-6 text-ink/80"></i>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold mb-6 tracking-tight">
+                Ready to begin your draft?
+            </h2>
+            <p class="text-ink/80 text-base md:text-lg mb-10 font-sans font-medium">
+                Subscribe to our guild newsletter. Be the first to know when new masterclasses are announced and receive weekly writing prompts from our instructors.
+            </p>
+
+            <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                <input type="email" placeholder="Your email address..." class="w-full sm:w-2/3 px-6 py-4 bg-white/90 border-none focus:outline-none focus:ring-2 focus:ring-ink text-ink font-sans">
+                <button type="submit" class="w-full sm:w-1/3 px-6 py-4 bg-ink text-marigold font-bold uppercase tracking-widest text-xs font-sans hover:bg-white hover:text-ink transition-colors">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

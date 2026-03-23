@@ -1,0 +1,426 @@
+   <!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About
+
+    </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images\logo.png">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Tactile Button */
+        .book-block-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+        }
+        .dark .book-block-btn {
+            border-color: #C2A878;
+            box-shadow: 4px 4px 0px 0px #eda726;
+        }
+        .book-block-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+@media(max-width:820px){
+    .content{
+        align-items: center !important;
+    }
+}
+    </style>
+</head>
+<body class="bg-cream dark:bg-black transition-colors duration-500 bg-texture text-ink dark:text-white">
+    
+    <div id="navbar"></div>
+    <section class="relative w-full min-h-[80svh] lg:min-h-[100svh] flex items-center justify-center overflow-hidden bg-[#1a1612] transition-colors duration-500 pt-20">
+
+  <div class="absolute inset-0 z-0 group">
+    <img src="images\bg3.avif"
+         alt="Historic Library Interior"
+         class="w-full h-full object-cover grayscale-[30%] opacity-70 animate-[subtle-zoom_20s_infinite_alternate]" />
+    
+    <div class="absolute inset-0 bg-black/60 dark:bg-black/80 transition-colors duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1612] via-transparent to-[#1a1612]/50"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center text-center mt-10">
+
+    <div class="flex items-center justify-center space-x-3 md:space-x-4 mb-6 md:mb-8 animate-fade-in-up">
+      <span class="w-8 md:w-12 h-[2px] bg-[#eda726]"></span>
+      <span class="uppercase tracking-[0.3em] text-[10px] md:text-xs font-bold text-white font-sans">Our Story</span>
+      <span class="w-8 md:w-12 h-[2px] bg-[#eda726]"></span>
+    </div>
+
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-6 md:mb-8 tracking-tight font-serif-elegant animate-fade-in-up" style="animation-delay: 0.1s;">
+      A Sanctuary for <br />
+      <span class="font-normal italic text-[#eda726]">The Curious Mind.</span>
+    </h1>
+
+    <p class="text-base md:text-lg lg:text-xl font-medium text-gray-200 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12 font-sans animate-fade-in-up" style="animation-delay: 0.2s;">
+      More than just a bookstore. We are a collective of bibliophiles dedicated to the preservation of the physical book, founded on the belief that true connection is found in shared stories.
+    </p>
+
+    <div class="flex flex-col items-center animate-fade-in-up" style="animation-delay: 0.3s;">
+      <div class="mb-12">
+        <p class="text-[10px] md:text-xs font-bold uppercase tracking-[0.3em] text-[#C2A878] mb-2 font-sans">Established</p>
+        <p class="text-2xl md:text-3xl font-serif-elegant italic text-white">2026</p>
+      </div>
+      
+      <div class="flex flex-col items-center opacity-60">
+        <span class="text-[8px] uppercase tracking-[0.3em] text-white mb-3 font-bold font-sans">Discover</span>
+        <div class="w-[1px] h-12 bg-gradient-to-b from-[#eda726] to-transparent relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1/2 bg-white animate-scroll-line"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section class="relative py-24 md:py-32 bg-white dark:bg-black text-black overflow-hidden border-y border-antgold/20">
+    
+    <!-- Background Elements -->
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-marigold/10 rounded-full blur-[100px] z-0 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+            
+            <!-- Image Section -->
+            <div class="lg:col-span-5 relative group">
+                <div class="absolute inset-0 bg-marigold translate-x-4 translate-y-4 shadow-lg z-0 transition-transform duration-500 group-hover:translate-x-6 group-hover:translate-y-6"></div>
+                
+                <div class="relative z-10 aspect-[4/5] overflow-hidden shadow-2xl">
+                    <img src="images\profile1.avif" 
+                         alt="Featured Author Portrait" 
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                </div>
+                
+               
+            </div>
+
+            <!-- Content Section -->
+            <div class="content lg:col-span-7 flex flex-col justify-center">
+                
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="w-8 h-[2px] bg-marigold"></span>
+                    <span class="uppercase tracking-[0.25em] text-[10px] md:text-xs font-bold text-marigold dark:text-white font-sans">
+                        Author in Residence
+                    </span>
+                </div>
+
+                <h2 class="text-5xl sm:text-6xl dark:text-white md:text-7xl font-bold font-serif-elegant mb-8 leading-[1.1]">
+                    Madeline <span class="italic font-normal dark:text-white text-antgold">Miller</span>
+                </h2>
+
+
+                <p class="text-sm md:text-base text-gray-600 dark:text-white font-sans leading-relaxed mb-10 max-w-xl">
+                    Join us this month as we celebrate the works of Madeline Miller. Known for her breathtaking adaptations of ancient Greek mythology, her prose breathes vibrant, undeniable life into classic tales. She will be joining us for an exclusive reading and Q&A session in The Hub this weekend.
+                </p>
+
+                <!-- Featured Book -->
+                <div class="flex items-center gap-6 bg-gray-100 border border-gray-200 p-4 md:p-6 max-w-lg mb-10 hover:bg-gray-200 transition-colors duration-300">
+                    <img src="https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=400&auto=format&fit=crop" 
+                         alt="Circe Book Cover" 
+                         class="w-16 md:w-24 aspect-[3/4] object-cover shadow-lg border border-gray-300">
+                    <div class="flex flex-col">
+                        <span class="text-antgold uppercase tracking-[0.2em] text-[9px] font-bold font-sans mb-1">
+                            Featured Book
+                        </span>
+                        <h4 class="text-2xl font-serif-elegant font-bold text-black mb-2">
+                            Circe
+                        </h4>
+                        <a href="#" class="text-marigold text-[10px] font-bold uppercase tracking-widest font-sans hover:text-black transition-colors inline-flex items-center gap-2">
+                            Buy the Signed Edition <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 font-sans">
+                    <a href="blog.html" class="px-8 py-4 bg-marigold text-white font-bold uppercase tracking-widest text-xs text-center shadow-[4px_4px_0px_#C2A878] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+                        Read Full Interview
+                    </a>
+                    <a href="hub.html" class="px-8 py-4 border-2 border-black dark:border-white border-2 text-black dark:text-white font-bold uppercase tracking-widest text-xs text-center hover:bg-black hover:text-white transition-colors">
+                        Know About Hub
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-24 md:py-32 lg:py-40 bg-[#F8F3E8] dark:bg-[#1a1612] transition-colors duration-500 relative border-y border-[#C2A878]/20 ">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+<div class="flex flex-col items-center justify-center text-center mb-16 md:mb-24 gap-8">
+  
+  <div class="max-w-2xl">
+    
+    <div class="flex items-center justify-center space-x-4 mb-6">
+      <span class="w-8 h-[1px] bg-[#eda726]"></span>
+      <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">
+        The Philosophy
+      </span>
+    </div>
+
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1a1612] dark:text-white tracking-tight font-serif-elegant leading-[1.1]">
+      Our Vision <span class="italic text-[#eda726] font-normal">&</span> Mission.
+    </h2>
+
+  </div>
+
+
+     
+    </div>
+
+    <div class="grid grid-cols-1 border-t border-[#C2A878]/30">
+
+      <div class="group flex flex-col md:flex-row items-start md:items-center py-12 md:py-16 border-b border-[#C2A878]/20 transition-colors duration-500 hover:bg-white/40 dark:hover:bg-white/5 px-4 md:px-8 -mx-4 md:-mx-8 cursor-default">
+        <div class="w-full md:w-1/4 mb-6 md:mb-0 flex items-center md:block">
+          <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white uppercase tracking-wider">The Vision</h3>
+        </div>
+        <div class="w-full md:w-3/4 md:pl-12 lg:pl-24">
+          <p class="text-base md:text-xl lg:text-[16px] font-medium text-gray-600 dark:text-gray-400 leading-relaxed font-sans transition-colors duration-300 group-hover:text-[#1a1612] dark:group-hover:text-white">
+            To redefine the relationship between modern communities and literature. We envision a sanctuary anchored in authenticity—a world where a bookstore transcends retail to become a deeply personal hub for dialogue, imagination, and shared humanity.
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col md:flex-row items-start md:items-center py-12 md:py-16 border-b border-[#C2A878]/20 transition-colors duration-500 hover:bg-white/40 dark:hover:bg-white/5 px-4 md:px-8 -mx-4 md:-mx-8 cursor-default">
+        <div class="w-full md:w-1/4 mb-6 md:mb-0 flex items-center md:block">
+          <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white uppercase tracking-wider">The Mission</h3>
+        </div>
+        <div class="w-full md:w-3/4 md:pl-12 lg:pl-24">
+          <p class="text-base md:text-xl lg:text-[16px] font-medium text-gray-600 dark:text-gray-400 leading-relaxed font-sans transition-colors duration-300 group-hover:text-[#1a1612] dark:group-hover:text-white">
+            To preserve the tactile magic of the analog reading experience through uncompromising curation. We commit to sourcing independent voices, rescuing rare out-of-print editions, and providing an environment where books are savored alongside warm, unhurried conversation.
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col md:flex-row items-start md:items-center py-12 md:py-16 border-b border-[#C2A878]/20 transition-colors duration-500 hover:bg-white/40 dark:hover:bg-white/5 px-4 md:px-8 -mx-4 md:-mx-8 cursor-default">
+        <div class="w-full md:w-1/4 mb-6 md:mb-0 flex items-center md:block">
+          <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white uppercase tracking-wider"> Promise</h3>
+        </div>
+        <div class="w-full md:w-3/4 md:pl-12 lg:pl-24">
+          <p class="text-base md:text-xl lg:text-[16px] font-medium text-gray-600 dark:text-gray-400 leading-relaxed font-sans transition-colors duration-300 group-hover:text-[#1a1612] dark:group-hover:text-white">
+            To remain an independent haven. We pledge to never prioritize algorithms over aesthetics, or mass-market trends over meaningful prose. Every shelf will remain a testament to human thought, carefully curated by human hands.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<section class="py-24 md:py-32 lg:py-40 bg-white dark:bg-[#12100d] transition-colors duration-500 overflow-hidden border-t border-[#C2A878]/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col items-center text-center mb-16 md:mb-24">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="w-8 h-[2px] bg-[#eda726]"></span>
+        <span class="uppercase tracking-[0.25em] text-[10px] md:text-xs font-bold text-[#C2A878] font-sans">The Bibliophiles</span>
+        <span class="w-8 h-[2px] bg-[#eda726]"></span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif-elegant text-[#1a1612] dark:text-white tracking-tight mb-6">
+        Meet the Curators</span>
+      </h2>
+      <p class="text-sm md:text-base font-medium text-gray-600 dark:text-gray-400 max-w-2xl font-sans">
+        The soul of The Bookora lies in the people who tend to its shelves. Our team consists of former archivists, published authors, and lifelong readers dedicated to pairing you with your next great story.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 items-stretch">
+      
+      <div class="group flex flex-col text-center h-full">
+        <div class="relative w-full aspect-[3/4] overflow-hidden mb-8 bg-[#1a1612] shadow-xl shrink-0">
+          <div class="absolute inset-4 border border-white/0 group-hover:border-[#C2A878]/40 transition-colors duration-700 pointer-events-none z-20"></div>
+          <img src="images\profile2.avif" 
+               alt="Arthur Pendelton" 
+               class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-transform duration-[4s] ease-out group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+        </div>
+        
+        <h3 class="text-2xl md:text-3xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-2 group-hover:text-[#eda726] transition-colors duration-300">Arthur Pendelton</h3>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-[#C2A878] font-bold font-sans mb-5">Rare Books Specialist</p>
+        
+        
+        <div class="pt-5 border-t border-[#C2A878]/20 w-[80%] mx-auto mt-auto">
+          <p class="text-xs text-gray-500 dark:text-gray-500 font-sans uppercase tracking-widest font-bold mb-1">Currently Reading</p>
+          <p class="text-sm text-[#1a1612] dark:text-gray-200 font-serif-elegant italic">The Secret History</p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col text-center h-full">
+        <div class="relative w-full aspect-[3/4] overflow-hidden mb-8 bg-[#1a1612] shadow-xl shrink-0">
+          <div class="absolute inset-4 border border-white/0 group-hover:border-[#C2A878]/40 transition-colors duration-700 pointer-events-none z-20"></div>
+          <img src="images\profile3.avif" 
+               alt="Maya Lin" 
+               class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-transform duration-[4s] ease-out group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+        </div>
+        
+        <h3 class="text-2xl md:text-3xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-2 group-hover:text-[#eda726] transition-colors duration-300">Maya Lin</h3>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-[#C2A878] font-bold font-sans mb-5">Events & Community Lead</p>
+       
+        
+        <div class="pt-5 border-t border-[#C2A878]/20 w-[80%] mx-auto mt-auto">
+          <p class="text-xs text-gray-500 dark:text-gray-500 font-sans uppercase tracking-widest font-bold mb-1">Currently Reading</p>
+          <p class="text-sm text-[#1a1612] dark:text-gray-200 font-serif-elegant italic">Ariel by Sylvia Plath</p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col text-center h-full">
+        <div class="relative w-full aspect-[3/4] overflow-hidden mb-8 bg-[#1a1612] shadow-xl shrink-0">
+          <div class="absolute inset-4 border border-white/0 group-hover:border-[#C2A878]/40 transition-colors duration-700 pointer-events-none z-20"></div>
+          <img src="images\profile4.avif" 
+               alt="Julian Vance" 
+               class="w-full h-full object-cover filter grayscale-[40%] group-hover:grayscale-0 transition-transform duration-[4s] ease-out group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+        </div>
+        
+        <h3 class="text-2xl md:text-3xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-2 group-hover:text-[#eda726] transition-colors duration-300">Julian Vance</h3>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-[#C2A878] font-bold font-sans mb-5">Head Barista & Fiction Lead</p>
+        
+        
+        <div class="pt-5 border-t border-[#C2A878]/20 w-[80%] mx-auto mt-auto">
+          <p class="text-xs text-gray-500 dark:text-gray-500 font-sans uppercase tracking-widest font-bold mb-1">Currently Reading</p>
+          <p class="text-sm text-[#1a1612] dark:text-gray-200 font-serif-elegant italic">The Midnight Library</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-24 md:py-32 bg-[#F8F3E8] dark:bg-[#1a1612] transition-colors duration-500  border-t border-[#C2A878]/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col items-center text-center mb-16 md:mb-24">
+      <div class="flex items-center space-x-4 mb-6">
+        <span class="w-8 h-[1px] bg-[#eda726]"></span>
+        <span class="uppercase tracking-[0.25em] text-[10px] md:text-xs font-bold text-[#C2A878] font-sans">The Bookora Standard</span>
+        <span class="w-8 h-[1px] bg-[#eda726]"></span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold font-serif-elegant text-[#1a1612] dark:text-white tracking-tight mb-6">
+        What Sets Us Apart</span>
+      </h2>
+      <p class="text-sm md:text-base font-medium text-gray-600 dark:text-gray-400 max-w-2xl font-sans leading-relaxed">
+        In a world of infinite scrolling and algorithmic recommendations, we offer a deliberate pause. Here is why readers choose to make our sanctuary their second home.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      
+      <div class="flex flex-col text-center p-10 border border-[#C2A878]/30 dark:border-[#C2A878]/20 bg-white/50 dark:bg-black/10 backdrop-blur-sm group hover:-translate-y-2 hover:border-[#eda726]/60 transition-all duration-500">
+        <div class="w-16 h-16 mx-auto rounded-full border border-[#C2A878]/40 flex items-center justify-center mb-8 group-hover:bg-[#eda726] transition-colors duration-500">
+          <i class="fas fa-hand-holding-heart text-2xl text-[#1a1612] dark:text-white group-hover:text-[#1a1612] transition-colors duration-500"></i>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-4">Human Curation</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed flex-grow">
+          Every title is hand-selected by our librarians based on literary merit, emotional resonance, and historical significance.
+      </div>
+
+      <div class="flex flex-col text-center p-10 border border-[#C2A878]/30 dark:border-[#C2A878]/20 bg-white/50 dark:bg-black/10 backdrop-blur-sm group hover:-translate-y-2 hover:border-[#eda726]/60 transition-all duration-500">
+        <div class="w-16 h-16 mx-auto rounded-full border border-[#C2A878]/40 flex items-center justify-center mb-8 group-hover:bg-[#eda726] transition-colors duration-500">
+          <i class="fas fa-couch text-2xl text-[#1a1612] dark:text-white group-hover:text-[#1a1612] transition-colors duration-500"></i>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-4">A True Sanctuary</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed flex-grow">
+          Every title is hand-selected by our librarians based on literary merit, emotional resonance, and historical significance.
+      </div>
+
+      <div class="flex flex-col text-center p-10 border border-[#C2A878]/30 dark:border-[#C2A878]/20 bg-white/50 dark:bg-black/10 backdrop-blur-sm group hover:-translate-y-2 hover:border-[#eda726]/60 transition-all duration-500">
+        <div class="w-16 h-16 mx-auto rounded-full border border-[#C2A878]/40 flex items-center justify-center mb-8 group-hover:bg-[#eda726] transition-colors duration-500">
+          <i class="fas fa-users text-2xl text-[#1a1612] dark:text-white group-hover:text-[#1a1612] transition-colors duration-500"></i>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold font-serif-elegant text-[#1a1612] dark:text-white mb-4">Deep Connection</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed flex-grow">
+        Every title is hand-selected by our librarians based on literary merit, emotional resonance, and historical significance. 
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="relative w-full py-24 md:py-32 bg-[#1a1612] transition-colors duration-500 overflow-hidden border-t border-[#C2A878]/20">
+
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2000&auto=format&fit=crop" 
+         class="w-full h-full object-cover grayscale-[40%] opacity-20" 
+         alt="Quiet library reading room">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1612] via-[#1a1612]/80 to-[#1a1612]/40"></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+
+    <div class="flex items-center justify-center gap-4 mb-8">
+      <span class="w-12 h-[1px] bg-[#C2A878]"></span>
+      <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">
+        The Next Chapter
+      </span>
+      <span class="w-12 h-[1px] bg-[#C2A878]"></span>
+    </div>
+
+    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.2] mb-6 font-serif-elegant">
+      Become a part of <br>
+      <span class="italic text-[#eda726] font-normal">our story.</span>
+    </h2>
+
+    <p class="mt-6 max-w-xl mx-auto text-gray-300 text-base md:text-lg leading-relaxed font-sans font-light">
+      Whether you are hunting for a rare first edition, seeking a quiet corner to read, or looking to join a community of fellow bibliophiles, our doors are always open.
+    </p>
+
+    <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8">
+
+      <a href="blog.html" class="w-full sm:w-auto px-10 py-4 bg-[#eda726] text-[#1a1612] text-xs font-bold uppercase tracking-widest font-sans transition-all duration-300 border-2 border-[#1a1612] shadow-[4px_4px_0px_0px_#C2A878] hover:translate-x-1 hover:translate-y-1 hover:shadow-none">
+        Explore The Archives
+      </a>
+
+      <a href="contact.html" class="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-white hover:text-[#eda726] transition-colors duration-300 font-sans mt-4 sm:mt-0">
+        <span>Plan Your Visit</span>
+        <div class="relative w-12 h-[1px] bg-white overflow-hidden group-hover:bg-[#eda726] transition-colors">
+          <div class="absolute inset-0 bg-[#eda726] -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+    <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hub</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="images\logo.png">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        };
+    </script>
+    </head>
+    <body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 ">
+    
+    <div id="navbar"></div>
+<section class="relative w-full min-h-[100svh] flex items-center justify-center bg-ink overflow-hidden pt-20">
+    
+    <div class="absolute inset-0 z-0 group">
+        <img src="images\img8.avif" 
+             alt="The Hub Reading Room" 
+             class="w-full h-full object-cover object-center ">
+        
+        <div class="absolute inset-0 bg-black/70 "></div>
+        <div class="absolute inset-0 "></div>
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center mt-8">
+
+        <div class="flex items-center justify-center space-x-4 mb-6 md:mb-8">
+            <span class="w-8 md:w-12 h-[1px] bg-marigold"></span>
+            <span class="uppercase tracking-[0.3em] text-[10px] md:text-xs font-bold text-antgold font-sans">
+                The Heart of Bookora
+            </span>
+            <span class="w-8 md:w-12 h-[1px] bg-marigold"></span>
+        </div>
+
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-elegant font-bold text-white leading-[1.1] mb-6 md:mb-8 tracking-tight">
+            Our Physical <br class="hidden sm:block" />
+            <span class="font-normal italic text-marigold">Sanctuary.</span>
+        </h1>
+
+        <p class="text-base md:text-lg font-medium text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12 font-sans">
+            More than just shelves of books. The Hub is a dedicated space for quiet focus, spirited discourse, and artisanal brews from The Inkwell Café. Step inside and find your corner.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
+            
+            <a href="club.html" class="book-block-btn w-full sm:w-auto px-10 py-4 bg-marigold text-ink text-xs font-bold uppercase tracking-widest transition-all duration-300 font-sans text-center">
+                Explore The Spaces
+            </a>
+            
+            <a href="contact.html" class="group flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-widest text-white hover:text-marigold transition-colors font-sans w-full sm:w-auto py-4">
+                <span>Plan Your Visit</span>
+                <div class="relative w-8 h-[1px] bg-white overflow-hidden group-hover:bg-marigold transition-colors">
+                    <div class="absolute inset-0 bg-marigold -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                </div>
+            </a>
+            
+        </div>
+
+    </div>
+
+
+</section>
+<section id="spaces" class="py-24 md:py-32 lg:py-40 bg-[#F8F3E8] dark:bg-[#1a1612] transition-colors duration-500 bg-texture border-b border-[#C2A878]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-20 md:mb-32">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">Inside The Sanctuary</span>
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6 tracking-tight">
+                Explore The Architecture
+            </h2>
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                From sun-drenched reading corners to climate-controlled vaults, every inch of The Hub was designed to elevate the reading experience.
+            </p>
+        </div>
+
+        <div class="space-y-24 md:space-y-32">
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="relative aspect-[4/3] overflow-hidden shadow-2xl z-10 border border-[#C2A878]/20 bg-[#1a1612]">
+                        <img src="images\img13.avif" 
+                             alt="The Main Reading Room" 
+                             class="w-full h-full object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col">
+                    <span class="text-[50px] md:text-[70px] font-serif-elegant italic text-gray-300 dark:text-gray-800 leading-none mb-4 group-hover:text-[#eda726]/30 transition-colors duration-500">01</span>
+                    <h3 class="text-3xl md:text-4xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6">The Grand Library</h3>
+                    
+                    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6">
+                        The heart of our sanctuary features floor-to-ceiling mahogany shelves, rolling ladders, and plush leather armchairs. bathed in natural light during the day, it transforms into a cozy, amber-lit haven by evening.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8 text-xs font-sans text-[#1a1612] dark:text-white border-l-2 border-[#eda726] pl-4">
+                        <li class="flex items-center gap-3">Silent reading zones enforced daily</li>
+                        <li class="flex items-center gap-3">Open-access contemporary and classic fiction</li>
+                        <li class="flex items-center gap-3">Reserved seating available for Patrons</li>
+                    </ul>
+                    
+                    <a href="blogdetails.html" class="w-fit text-[10px] font-bold uppercase tracking-widest text-[#eda726] border-b border-[#eda726] hover:text-[#1a1612] dark:hover:text-white transition-colors pb-1">
+                        View Reading Guidelines
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20 group">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="relative aspect-[4/3] overflow-hidden shadow-2xl z-10 border border-[#C2A878]/20 bg-[#1a1612]">
+                        <img src="images\img14.avif" 
+                             alt="The Inkwell Cafe" 
+                             class="w-full h-full object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col">
+                    <span class="text-[50px] md:text-[70px] font-serif-elegant italic text-gray-300 dark:text-gray-800 leading-none mb-4 group-hover:text-[#eda726]/30 transition-colors duration-500">02</span>
+                    <h3 class="text-3xl md:text-4xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6">The Inkwell Café</h3>
+                    
+                    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6">
+                        A sensory complement to your reading experience. The Inkwell serves artisanal pour-overs, loose-leaf botanical teas, and a curated selection of pastries from local patisseries. 
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8 text-xs font-sans text-[#1a1612] dark:text-white border-l-2 border-[#eda726] pl-4">
+                        <li class="flex items-center gap-3">Locally roasted, ethically sourced beans</li>
+                        <li class="flex items-center gap-3">Literary-themed seasonal tasting menus</li>
+                        <li class="flex items-center gap-3">Soft conversational ambiance</li>
+                    </ul>
+                    
+                    <a href="blogdetails.html" class="w-fit text-[10px] font-bold uppercase tracking-widest text-[#eda726] border-b border-[#eda726] hover:text-[#1a1612] dark:hover:text-white transition-colors pb-1">
+                        Explore the Menu
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 group">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="relative aspect-[4/3] overflow-hidden shadow-2xl z-10 border border-[#C2A878]/20 bg-[#1a1612]">
+                        <img src="images\img12.avif" 
+                             alt="The Rare Book Vault" 
+                             class="w-full h-full object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105" />
+                        <div class="absolute top-6 left-6 bg-[#1a1612] text-[#eda726] dark:bg-white dark:text-[#1a1612] px-3 py-1 text-[9px] font-bold uppercase tracking-widest shadow-md">
+                            By Appointment Only
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex flex-col">
+                    <span class="text-[50px] md:text-[70px] font-serif-elegant italic text-gray-300 dark:text-gray-800 leading-none mb-4 group-hover:text-[#eda726]/30 transition-colors duration-500">03</span>
+                    <h3 class="text-3xl md:text-4xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6">The Curator's Vault</h3>
+                    
+                    <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6">
+                        Housed behind glass and strict climate control, our Vault holds rare first editions, signed manuscripts, and antique folios. It is a museum space dedicated to the physical preservation of history.
+                    </p>
+                    
+                    <ul class="space-y-3 mb-8 text-xs font-sans text-[#1a1612] dark:text-white border-l-2 border-[#eda726] pl-4">
+                        <li class="flex items-center gap-3">White-glove viewing experiences</li>
+                        <li class="flex items-center gap-3">Antique appraisal services</li>
+                        <li class="flex items-center gap-3">Private acquisition consultations</li>
+                    </ul>
+                    
+                    <a href="blogdetails.html" class="w-fit text-[10px] font-bold uppercase tracking-widest text-[#eda726] border-b border-[#eda726] hover:text-[#1a1612] dark:hover:text-white transition-colors pb-1">
+                        Request a Viewing
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="py-24 md:py-32 lg:py-40 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 relative overflow-hidden border-b border-[#C2A878]/20 bg-texture">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+            
+            <div class="relative w-full h-full min-h-[400px] lg:min-h-full z-0">
+                
+                <div class="relative w-full h-full shadow-2xl overflow-hidden bg-[#1a1612] z-10">
+                    <img src="images\img9.avif" 
+                         alt="Private Event at The Hub" 
+                         class="w-full h-full object-cover grayscale-[30%] hover:grayscale-0 transition-all duration-1000 hover:scale-105 opacity-90">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1612]/80 via-transparent to-transparent"></div>
+                </div>
+            </div>
+
+            <div class="w-full h-full bg-[#F8F3E8] dark:bg-[#12100d] border border-[#C2A878]/30 p-10 md:p-14 lg:p-16 shadow-2xl transition-colors duration-500 relative overflow-hidden group flex flex-col justify-center z-10">
+                
+                <div class="absolute top-0 right-0 w-24 h-24 bg-[#eda726]/5 rounded-bl-[100px] transition-transform duration-500 group-hover:scale-110"></div>
+
+                <div class="flex items-center space-x-3 mb-6 relative z-10">
+                    <span class="w-8 h-[1px] bg-[#eda726]"></span>
+                    <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">Venue Hire</span>
+                </div>
+                
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6 leading-tight relative z-10">
+                    Reserve the HUB
+                </h2>
+                
+                <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8 relative z-10">
+                    Whether you are hosting an intimate book launch, a creative workshop, or a private reception, The Hub provides an atmosphere of unmatched literary elegance. Full venue and individual room buyouts are available after hours.
+                </p>
+
+                <ul class="space-y-3 mb-10 text-xs font-sans text-[#1a1612] dark:text-white relative z-10">
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-[#eda726]"></i> Dedicated event coordination
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-[#eda726]"></i> In-house catering via The Inkwell Café
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-check text-[#eda726]"></i> Capacity for up to 120 guests
+                    </li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row items-center gap-6 relative z-10 mt-auto">
+                    <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-[#1a1612] dark:bg-white text-white dark:text-[#1a1612] text-[10px] font-bold uppercase tracking-widest font-sans border-2 border-[#1a1612] dark:border-white shadow-[4px_4px_0px_0px_#C2A878] hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_0px_0px_0px_transparent] transition-all text-center">
+                        Inquire About Dates
+                    </a>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-24 md:py-32 bg-[#F8F3E8] dark:bg-[#0a0a0a] transition-colors duration-500 border-b border-[#C2A878]/20 bg-texture">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       <div class="flex flex-col items-center text-center mb-16 md:mb-24 gap-8">
+    
+    <div class="max-w-xl">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+            <span class="w-8 h-[1px] bg-[#eda726]"></span>
+            <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">
+                Our Booksellers
+            </span>
+            <span class="w-8 h-[1px] bg-[#eda726]"></span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-serif-elegant font-bold text-[#1a1612] dark:text-white tracking-tight">
+            The Faces of The Hub
+        </h2>
+    </div>
+
+</div>
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+            
+            <div class="flex flex-col sm:flex-row bg-white dark:bg-[#12100d] border border-[#C2A878]/30 group hover:border-[#eda726]/50 transition-colors duration-500 shadow-md">
+                <div class="w-full sm:w-2/5 aspect-square sm:aspect-auto relative overflow-hidden shrink-0">
+                    <img src="images\profile2.avif" 
+                         alt="Julian" 
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute bottom-0 left-0 bg-[#1a1612] text-[#eda726] px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Head Curator
+                    </div>
+                </div>
+                
+                <div class="p-6 md:p-8 flex flex-col justify-center w-full sm:w-3/5">
+                    <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-1">Julian Hayes</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-[#C2A878] font-bold font-sans mb-6">Specialty: Translated Fiction</p>
+                    
+                    <div class="border-t border-[#C2A878]/20 pt-6 mt-auto">
+                        <span class="text-[9px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold font-sans block mb-3">Current Staff Pick:</span>
+                        <div class="flex items-start gap-4">
+                            <img src="images\img3.avif" alt="Book Cover" class="w-12 shadow-sm shrink-0">
+                            <div>
+                                <h4 class="text-sm font-serif-elegant font-bold text-[#1a1612] dark:text-white leading-tight">The Shadow of Wind</h4>
+                                <p class="text-[10px] text-gray-500 mt-1">Carlos Ruiz Zafón</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row bg-white dark:bg-[#12100d] border border-[#C2A878]/30 group hover:border-[#eda726]/50 transition-colors duration-500 shadow-md">
+                <div class="w-full sm:w-2/5 aspect-square sm:aspect-auto relative overflow-hidden shrink-0">
+                    <img src="images\profile3.avif" 
+                         alt="Maya" 
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute bottom-0 left-0 bg-[#1a1612] text-[#eda726] px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Vault Archivist
+                    </div>
+                </div>
+                
+                <div class="p-6 md:p-8 flex flex-col justify-center w-full sm:w-3/5">
+                    <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-1">Maya Lin</h3>
+                    <p class="text-[10px] uppercase tracking-widest text-[#C2A878] font-bold font-sans mb-6">Specialty: Antiquarian & Rare</p>
+                    
+                    <div class="border-t border-[#C2A878]/20 pt-6 mt-auto">
+                        <span class="text-[9px] uppercase tracking-widest text-gray-500 dark:text-gray-400 font-bold font-sans block mb-3">Current Staff Pick:</span>
+                        <div class="flex items-start gap-4">
+                            <img src="images\img6.avif" alt="Book Cover" class="w-12 shadow-sm shrink-0">
+                            <div>
+                                <h4 class="text-sm font-serif-elegant font-bold text-[#1a1612] dark:text-white leading-tight">The Secret History</h4>
+                                <p class="text-[10px] text-gray-500 mt-1">Donna Tartt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-24 md:py-32 bg-white dark:bg-[#12100d] transition-colors duration-500 relative border-b border-[#C2A878]/20 bg-texture overflow-hidden">
+    
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#eda726]/5 rounded-full blur-[120px] pointer-events-none -translate-y-1/2 translate-x-1/4"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-20 items-center">
+            
+            <div class="md:col-span-5 lg:col-span-5 relative group">
+                
+                <div class="w-full max-w-sm md:max-w-full lg:max-w-md mx-auto aspect-[3/4] p-3 md:p-4 border border-[#C2A878]/40 rounded-t-[999px] relative overflow-hidden transition-colors duration-500 bg-white dark:bg-[#1a1612] shadow-xl">
+                    <div class="w-full h-full rounded-t-[999px] overflow-hidden relative">
+                        <img src="images\img16.avif" 
+                             alt="Pour over coffee at The Inkwell" 
+                             class="w-full h-full object-cover filter grayscale-[30%] group-hover:grayscale-0 transition-transform duration-[7s] ease-out group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a1612]/60 via-transparent to-transparent"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="md:col-span-7 lg:col-span-7 flex flex-col justify-center">
+                
+                <div class="flex items-center space-x-3 mb-6">
+                    <span class="w-8 h-[1px] bg-[#eda726]"></span>
+                    <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">Sensory Companions</span>
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6 leading-tight">
+                    Taste of The Bookora
+                </h2>
+
+                <div class="space-y-8 mt-8  md:space-y-10">
+                    
+                    <div>
+                        <h3 class="text-lg font-bold uppercase tracking-widest text-[#1a1612] dark:text-white font-sans border-b border-[#C2A878]/30 pb-2 mb-4 md:mb-6">
+                            Artisanal Roasts
+                        </h3>
+                        <div class="space-y-5">
+                           
+                            <div class="flex justify-between items-baseline group cursor-default">
+                                <div class="flex-1 pr-4">
+                                    <h4 class="text-base font-serif-elegant font-bold text-[#1a1612] dark:text-white group-hover:text-[#eda726] transition-colors">Classic Cortado</h4>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 font-sans mt-1">Equal parts bold espresso and warmly textured milk.</p>
+                                </div>
+                                <div class="text-sm font-bold font-sans text-[#C2A878] ml-auto shrink-0">$5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-bold uppercase tracking-widest text-[#1a1612] dark:text-white font-sans border-b border-[#C2A878]/30 pb-2 mb-4 md:mb-6">
+                            Botanical Teas
+                        </h3>
+                        <div class="space-y-5">
+                           
+                            <div class="flex justify-between items-baseline group cursor-default">
+                                <div class="flex-1 pr-4">
+                                    <h4 class="text-base font-serif-elegant font-bold text-[#1a1612] dark:text-white group-hover:text-[#eda726] transition-colors">Midnight Chamomile</h4>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400 font-sans mt-1">Caffeine-free blend of Egyptian chamomile, lavender, and mint.</p>
+                                </div>
+                                <div class="text-sm font-bold font-sans text-[#C2A878] ml-auto shrink-0">$5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-24 md:py-32 bg-[#F8F3E8] dark:bg-[#12100d] transition-colors duration-500 bg-texture border-b border-[#C2A878]/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-4">
+                Inquiries & Etiquette
+            </h2>
+            <p class="text-xs uppercase tracking-widest text-gray-500 font-bold font-sans">What to expect at The Hub</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            
+            <div class="border-t border-[#C2A878]/30 pt-6">
+                <h4 class="text-lg font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Do I need to finish the book to attend?</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                    Yes. The Inkwell Café provides complimentary drip coffee, artisanal teas, and water for all active circle members during the meeting. Specialty drinks are available for purchase.
+                </p>
+            </div>
+
+            <div class="border-t border-[#C2A878]/30 pt-6">
+                <h4 class="text-lg font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Are beverages provided?</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                    Yes. The Inkwell Café provides complimentary drip coffee, artisanal teas, and water for all active circle members during the meeting. Specialty drinks are available for purchase.
+                </p>
+            </div>
+
+            <div class="border-t border-[#C2A878]/30 pt-6">
+                <h4 class="text-lg font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">What happens if I miss a month?</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                    Yes. The Inkwell Café provides complimentary drip coffee, artisanal teas, and water for all active circle members during the meeting. Specialty drinks are available for purchase.
+                </p>
+            </div>
+
+            <div class="border-t border-[#C2A878]/30 pt-6">
+                <h4 class="text-lg font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Do I have to buy the book from The Hub?</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                    Yes. The Inkwell Café provides complimentary drip coffee, artisanal teas, and water for all active circle members during the meeting. Specialty drinks are available for purchase.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="py-24 md:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 relative overflow-hidden">
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <i class="fas fa-envelope-open-text text-3xl text-[#C2A878] mb-8"></i>
+        
+        <h2 class="text-3xl md:text-5xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6">
+            The Bookora <span class="italic text-[#eda726] font-normal">Dispatch.</span>
+        </h2>
+        
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-12 max-w-xl mx-auto">
+            Subscribe to our weekly ledger. Receive updates on new rare acquisitions, upcoming author salons, and seasonal tasting menus at The Inkwell.
+        </p>
+
+        <form class="flex flex-col sm:flex-row items-center justify-center max-w-lg mx-auto gap-4 sm:gap-0">
+            <input type="email" 
+                   placeholder="Enter your email address..." 
+                   required
+                   class="w-full sm:w-2/3 bg-transparent border-b-2 border-[#C2A878]/40 text-[#1a1612] dark:text-white px-4 py-3 font-sans text-sm focus:outline-none focus:border-[#eda726] transition-colors placeholder-gray-400 dark:placeholder-gray-600">
+            
+            <button type="submit" class="w-full sm:w-1/3 text-[10px] font-bold uppercase tracking-widest text-[#1a1612] dark:text-white hover:text-[#eda726] dark:hover:text-[#eda726] transition-colors py-3 sm:py-0 sm:ml-4 border-b-2 border-transparent hover:border-[#eda726]">
+                Subscribe <i class="fas fa-arrow-right ml-2 text-[9px]"></i>
+            </button>
+        </form>
+
+        <p class="text-[9px] uppercase tracking-widest text-gray-400 mt-8 font-sans">
+            We respect your inbox. No spam, ever.
+        </p>
+        
+    </div>
+</section>
+
+
+
+
+
+
+
+
+            <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

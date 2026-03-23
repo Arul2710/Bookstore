@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="images\logo.png">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        };
+    </script>
+  
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Tactile Button */
+        .book-block-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+        }
+        .dark .book-block-btn {
+            border-color: #C2A878;
+            box-shadow: 4px 4px 0px 0px #eda726;
+        }
+        .book-block-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 bg-texture">
+
+    <div id="navbar"></div>
+
+    <section class="relative w-full min-h-[100svh] flex items-center justify-center bg-ink overflow-hidden pt-20 border-b border-antgold/20">
+        
+        <div class="absolute inset-0 z-0 group">
+            <img src="images\bg6.avif"
+                 alt="Person writing in journal"
+                 class="w-full h-full object-cover object-center ">
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="absolute inset-0 "></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white mt-8">
+
+            <div class="flex items-center justify-center space-x-4 mb-6 md:mb-8">
+                <span class="w-8 h-[1px] bg-marigold"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">
+                    Essays & Dispatches
+                </span>
+                <span class="w-8 h-[1px] bg-marigold"></span>
+            </div>
+
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-serif-elegant font-bold leading-[1.1] mb-6 tracking-tight">
+                The Literary <span class="italic text-marigold font-normal">Journal.</span>
+            </h1>
+
+            <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-10 font-sans leading-relaxed">
+                Dive into our curated collection of author interviews, deep-dive critiques, and thoughts on the evolving landscape of modern publishing.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                <a href="club.html"
+                   class="book-block-btn w-full sm:w-auto px-10 py-4 bg-marigold text-ink text-xs font-bold uppercase tracking-widest transition-all duration-300 font-sans text-center">
+                    Read the Latest
+                </a>
+                <a href="contact.html"
+                   class="text-[10px] font-bold uppercase tracking-widest text-white border-b border-white hover:text-marigold hover:border-marigold transition-colors pb-1">
+                    Subscribe to the Ledger
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+<section id="latest" class="py-24 md:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 border-b border-antgold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+       <div class="flex flex-col items-center text-center mb-16 gap-8">
+    
+    <div class="max-w-xl">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-ink dark:text-white tracking-tight font-serif-elegant">
+            Recent Entries
+        </h2>
+    </div>
+
+</div>
+
+
+        <div class="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img15.avif"
+                         alt="Typewriter"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Author Interview
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">March 12, 2026 • 8 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        The Anatomy of a Thriller: A Conversation with Sarah 
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img12.avif"
+                         alt="Book stacks"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Critique
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">March 05, 2026 • 12 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        The Resurgence of the Novel in temporary Fiction
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img9.avif"
+                         alt="Coffee"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Bookora News
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">February 28, 2026 • 4 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        Introducing the Botanical Menu at The Inkwell
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img5.avif"
+                         alt="Library shelves"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Curator's Note
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">February 15, 2026 • 6 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        On Building a Personal Library: Where to Begin
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img10.avif"
+                         alt="Open book"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Essay
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">February 02, 2026 • 15 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        The Enduring of Physical Books in a Digital Age
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="group flex flex-col h-full cursor-pointer">
+                <div class="relative w-full aspect-[4/3] overflow-hidden mb-6 border border-antgold/20 shadow-md">
+                    <img src="images\img7.avif"
+                         alt="Classic architecture vault"
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105">
+                    <div class="absolute top-4 left-4 bg-ink text-white px-3 py-1 text-[9px] font-bold uppercase tracking-widest">
+                        Archive
+                    </div>
+                </div>
+                <div class="flex flex-col flex-grow">
+                    <p class="text-[10px] font-sans font-bold text-antgold tracking-widest uppercase mb-3">January 20, 2026 • 10 Min Read</p>
+                    <h3 class="text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 group-hover:text-marigold transition-colors leading-snug">
+                        Unlocking the Vault: A Look at Our First Editions
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6 flex-grow">
+                        We sat down with the NYT bestselling author ahead of her residency to discuss pacing, unreliable narrators, and transitioning from journalism.
+                    </p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border-b border-transparent group-hover:border-marigold transition-all pb-1 w-fit flex items-center gap-2">
+                       <a href="blogdetails.html"> Read Essay <i class="fas fa-arrow-right text-[8px]"></i></a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-12 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 border-b border-antgold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between border-t border-antgold/20 pt-8">
+                
+                <a href="#" class="group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-500 hover:text-ink dark:hover:text-white transition-colors">
+                    <i class="fas fa-long-arrow-alt-left group-hover:-translate-x-1 transition-transform"></i> Previous
+                </a>
+
+                <div class="hidden sm:flex items-center gap-2">
+                    <a href="#" class="w-8 h-8 flex items-center justify-center text-xs font-bold font-sans bg-ink text-white border border-ink">1</a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center text-xs font-bold font-sans text-ink dark:text-white border border-transparent hover:border-antgold transition-colors">2</a>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center text-xs font-bold font-sans text-ink dark:text-white border border-transparent hover:border-antgold transition-colors">3</a>
+                    <span class="px-2 text-gray-400">...</span>
+                    <a href="#" class="w-8 h-8 flex items-center justify-center text-xs font-bold font-sans text-ink dark:text-white border border-transparent hover:border-antgold transition-colors">8</a>
+                </div>
+
+                <a href="#" class="group flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white hover:text-marigold transition-colors">
+                    Next <i class="fas fa-long-arrow-alt-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-white dark:bg-ink transition-colors duration-500 border-b border-antgold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <span class="w-8 h-[1px] bg-marigold"></span>
+                    <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">Editor's Choice</span>
+                    <span class="w-8 h-[1px] bg-marigold"></span>
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-ink dark:text-white font-serif-elegant">
+                    The Monthly Feature
+                </h2>
+            </div>
+
+            <div class="flex flex-col lg:flex-row bg-cream dark:bg-[#12100d] border border-antgold/30 shadow-2xl overflow-hidden group">
+                
+                <div class="w-full lg:w-1/2 relative overflow-hidden aspect-video lg:aspect-auto">
+                    <img src="images\img17.avif"
+                         alt="Library discussion"
+                         class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-[2s] group-hover:scale-105">
+                </div>
+
+                <div class="w-full lg:w-1/2 p-10 md:p-14 lg:p-16 flex flex-col justify-center relative">
+                    <i class="fas fa-bookmark absolute top-8 right-8 text-8xl text-marigold/5 z-0"></i>
+                    
+                    <div class="relative z-10">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-marigold font-sans mb-4 block">Literary Analysis</span>
+                        
+                        <h3 class="text-3xl md:text-4xl font-serif-elegant font-bold text-ink dark:text-white mb-6 leading-tight">
+                            The Art of the Open Ending: Why We Crave Unresolved Narratives
+                        </h3>
+
+                        <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8">
+                            From Shirley Jackson to modern psychological thrillers, the unresolved ending leaves readers in a state of suspended animation. We explore the psychological reasons why the lack of closure often makes a story unforgettable.
+                        </p>
+
+                        <div class="flex items-center gap-4 pt-6 border-t border-antgold/20 mb-8">
+                            <div class="w-10 h-10 rounded-full bg-ink overflow-hidden border border-antgold/30">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale" alt="Author">
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-ink dark:text-white font-sans uppercase tracking-widest">Julian Hayes</p>
+                                <p class="text-[10px] text-gray-500 font-sans mt-1">Head Curator</p>
+                            </div>
+                        </div>
+
+                        <a href="blogdetails.html" class="book-block-btn inline-block px-8 py-4 bg-ink dark:bg-white text-white dark:text-ink text-[10px] font-bold uppercase tracking-widest font-sans border-2 border-ink dark:border-white shadow-[4px_4px_0px_0px_#C2A878] hover:shadow-[0px_0px_0px_0px_transparent] transition-all text-center">
+                            Read the Feature
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe" class="py-24 md:py-32 bg-cream dark:bg-black text-white relative overflow-hidden border-b border-antgold/20">
+        
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-marigold/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+
+            <i class="fas fa-envelope-open-text text-3xl text-antgold mb-6"></i>
+
+            <h2 class="text-4xl md:text-5xl text-black dark:text-white font-serif-elegant font-bold mb-6">
+                Join the <span class="italic text-marigold font-normal">Ledger.</span>
+            </h2>
+
+            <p class="text-sm md:text-base text-gray-400 font-sans max-w-xl mx-auto mb-10 leading-relaxed">
+                Subscribe to receive our latest literary essays, curator book recommendations, and priority access to author events directly to your inbox.
+            </p>
+
+            <form class="flex flex-col sm:flex-row items-center justify-center max-w-lg mx-auto gap-4 sm:gap-0">
+                <input type="email" 
+                       placeholder="Enter your email address..." 
+                       required
+                       class="w-full sm:w-2/3 bg-transparent border-b-2 border-antgold/40 text-white px-4 py-3 font-sans text-sm focus:outline-none focus:border-marigold transition-colors placeholder-gray-500">
+                
+                <button type="submit" class="w-full sm:w-1/3 text-[10px]  dark:text-white font-bold uppercase tracking-widest text-black hover:text-marigold transition-colors py-3 sm:py-0 sm:ml-4 border-b-2 border-transparent hover:border-marigold flex items-center justify-center gap-2">
+                    Subscribe <i class="fas fa-arrow-right text-[9px]"></i>
+                </button>
+            </form>
+            
+           
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+                <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

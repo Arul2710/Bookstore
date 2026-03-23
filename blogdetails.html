@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogdetails</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images\logo.png">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Tactile Button */
+        .book-block-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+        }
+        .dark .book-block-btn {
+            border-color: #C2A878;
+            box-shadow: 4px 4px 0px 0px #eda726;
+        }
+        .book-block-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+
+        /* Editorial Drop Cap */
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: bold;
+            color: #eda726;
+            float: left;
+            line-height: 1;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+        }
+    </style>
+</head>
+<body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 bg-texture">
+
+    <div id="navbar"></div>
+
+    <section class="relative w-full min-h-[100svh] flex items-center justify-center bg-ink overflow-hidden pt-20 border-b border-antgold/20">
+        
+        <div class="absolute inset-0 z-0">
+            <img src="images\img9.avif"
+                 alt="Typewriter"
+                 class="w-full h-full object-cover object-center ">
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="absolute inset-0 "></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white mt-8">
+
+            <div class="flex items-center justify-center space-x-3 mb-8">
+                <span class="w-8 h-[1px] bg-marigold"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans bg-ink/50 px-3 py-1 border border-antgold/30">
+                    Author Interview
+                </span>
+                <span class="w-8 h-[1px] bg-marigold"></span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-serif-elegant font-bold leading-[1.1] mb-8 tracking-tight">
+                The Anatomy of a Thriller: <br>
+                <span class="italic text-marigold font-normal text-3xl md:text-4xl lg:text-5xl mt-4 block">A Conversation with Sarah Jenkins</span>
+            </h1>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest font-sans">
+                <span class="text-white">By Julian Hayes</span>
+                <span class="hidden sm:inline text-marigold">•</span>
+                <span>March 12, 2026</span>
+                <span class="hidden sm:inline text-marigold">•</span>
+                <span>8 Min Read</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+
+                <article class="lg:col-span-8 lg:col-start-3 prose prose-lg dark:prose-invert prose-p:font-sans prose-headings:font-serif-elegant max-w-none">
+                    
+                    <p class="drop-cap text-gray-800 dark:text-gray-300 leading-relaxed mb-8 text-lg">
+                        There is a specific kind of silence that falls over a room when Sarah Jenkins is reading. It isn't the polite quiet of an attentive audience; it is the taut, breathless hush of people who have forgotten they need oxygen. Transitioning from a decade of hard-hitting investigative journalism to the realm of literary fiction, Jenkins has brought a terrifying sense of reality to the psychological thriller.
+                    </p>
+
+                    <p class="text-gray-800 dark:text-gray-300 leading-relaxed mb-12 text-lg">
+                        Ahead of her upcoming residency and salon at The Hub, we sat down in the quiet corner of The Inkwell Café to discuss the architecture of suspense, the ethics of true crime, and why she believes the unreliable narrator is the most honest reflection of the human condition.
+                    </p>
+
+                    <div class="my-16 relative border border-antgold/20 p-2 bg-cream dark:bg-ink shadow-lg group">
+                        <div class="overflow-hidden aspect-video">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop" 
+                                 alt="Sarah Jenkins" 
+                                 class="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                        </div>
+                        <p class="text-[9px] uppercase tracking-widest text-gray-500 text-center mt-4 font-bold font-sans">Sarah Jenkins photographed in The Gallery Vault.</p>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 border-l-4 border-marigold pl-4">
+                                <span class="text-marigold text-sm tracking-widest uppercase font-sans block mb-2">The Bookora</span>
+                                Your background is rooted strictly in facts. How difficult was the pivot from investigative journalism, where you are bound by truth, to fiction, where you are the architect of the lie?
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-300 leading-relaxed pl-5 border-l border-antgold/20">
+                                <span class="text-antgold font-bold uppercase tracking-widest text-[10px] block mb-2">Sarah Jenkins</span>
+                                It wasn't a pivot so much as a translation. Journalism taught me how to observe the mechanics of a catastrophe. You learn very quickly that the monster in the room isn't usually a cackling villain; it's a quiet person making a series of very small, very rational compromises. Fiction just allowed me to take those observations and strip away the legal liabilities. I’m still writing about the truth; I’m just using invented people to do it.
+                            </p>
+                        </div>
+
+                        <blockquote class="my-16 py-8 border-y border-antgold/30 text-center">
+                            <i class="fas fa-quote-left text-3xl text-marigold/30 mb-4 block"></i>
+                            <p class="text-2xl md:text-4xl font-serif-elegant italic text-ink dark:text-white leading-snug">
+                                "The beauty of the thriller doesn't lie in the twist, but in the slow, agonizing dread of the inevitable."
+                            </p>
+                        </blockquote>
+
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-serif-elegant font-bold text-ink dark:text-white mb-4 border-l-4 border-marigold pl-4">
+                                <span class="text-marigold text-sm tracking-widest uppercase font-sans block mb-2">The Bookora</span>
+                                Your upcoming salon at The Hub focuses on the "Architecture of Suspense." Can you give our readers a glimpse into how you build tension?
+                            </h3>
+                            <p class="text-gray-800 dark:text-gray-300 leading-relaxed pl-5 border-l border-antgold/20">
+                                <span class="text-antgold font-bold uppercase tracking-widest text-[10px] block mb-2">Sarah Jenkins</span>
+                                Tension is simply withholding information while making a promise to the reader. You show them the bomb under the table, you show them the timer ticking down, and then you force them to watch two people argue about the weather. It’s about pacing. I spend more time mapping out what my characters *don't* know than what they do.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-8 border-t border-antgold/20 flex flex-wrap items-center gap-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Filed Under:</span>
+                        <a href="#" class="px-3 py-1 bg-cream dark:bg-[#12100d] border border-antgold/30 text-[9px] uppercase tracking-widest font-bold text-ink dark:text-white hover:border-marigold transition-colors">Interviews</a>
+                        <a href="#" class="px-3 py-1 bg-cream dark:bg-[#12100d] border border-antgold/30 text-[9px] uppercase tracking-widest font-bold text-ink dark:text-white hover:border-marigold transition-colors">Thrillers</a>
+                    </div>
+
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-cream dark:bg-ink transition-colors duration-500 border-y border-antgold/20 ">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white dark:bg-[#0a0a0a] border border-antgold/30 p-8 md:p-12 shadow-xl">
+                
+                <div class="flex-shrink-0 relative">
+                    <div class="absolute inset-0 bg-marigold/10 translate-x-3 translate-y-3 border border-antgold/30"></div>
+                    <div class="relative w-32 h-40 overflow-hidden bg-ink z-10">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop"
+                             alt="Julian Hayes"
+                             class="w-full h-full object-cover grayscale-[30%]">
+                    </div>
+                </div>
+
+                <div class="text-center md:text-left pt-2">
+                    <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-antgold mb-2 block">The Interviewer</span>
+                    <h3 class="text-3xl font-serif-elegant font-bold text-ink dark:text-white mb-3">
+                        Julian Hayes
+                    </h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-6">
+                        Julian is the Head Curator at The Bookora. With a background in comparative literature, he oversees the monthly Reading Circles and moderates the visiting author salons in The Gallery Vault.
+                    </p>
+
+                    <div class="flex justify-center md:justify-start gap-6">
+                        <a href="#" class="text-gray-400 hover:text-marigold transition-colors"><i class="fab fa-twitter text-lg"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-marigold transition-colors"><i class="fas fa-envelope text-lg"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-500">
+        <div class="max-w-4xl mx-auto px-6">
+
+            <div class="mb-16">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="w-8 h-[1px] bg-marigold"></span>
+                    <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">Public Ledger</span>
+                </div>
+                <h2 class="text-3xl font-serif-elegant font-bold text-ink dark:text-white">
+                    The <span class="italic text-marigold">Discourse.</span>
+                </h2>
+            </div>
+
+            <div class="mb-20">
+                <h4 class="text-[10px] uppercase tracking-widest text-ink dark:text-white font-bold mb-6">Pen a Response</h4>
+                <form class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <input type="text" 
+                            placeholder="Your Name"
+                            class="w-full bg-transparent border-b border-antgold/40 text-ink dark:text-white px-2 py-3 font-sans text-sm focus:outline-none focus:border-marigold transition-colors placeholder-gray-400 dark:placeholder-gray-600">
+
+                        <input type="email" 
+                            placeholder="Your Email (Private)"
+                            class="w-full bg-transparent border-b border-antgold/40 text-ink dark:text-white px-2 py-3 font-sans text-sm focus:outline-none focus:border-marigold transition-colors placeholder-gray-400 dark:placeholder-gray-600">
+                    </div>
+
+                    <textarea rows="4"
+                        placeholder="Share your thoughts on the interview..."
+                        class="w-full bg-transparent border-b border-antgold/40 text-ink dark:text-white px-2 py-3 font-sans text-sm focus:outline-none focus:border-marigold transition-colors placeholder-gray-400 dark:placeholder-gray-600 resize-none"></textarea>
+
+                    <button type="submit" class="book-block-btn px-8 py-3 bg-ink dark:bg-white text-white dark:text-ink text-[10px] font-bold uppercase tracking-widest font-sans border-2 border-ink dark:border-white shadow-[4px_4px_0px_0px_#C2A878] hover:shadow-[0px_0px_0px_0px_transparent] transition-all">
+                        Submit Entry
+                    </button>
+                </form>
+            </div>
+
+            <div class="space-y-12 border-t border-antgold/20 pt-12">
+                
+                <div class="flex flex-col space-y-3">
+                    <div class="flex justify-between items-baseline border-b border-gray-200 dark:border-gray-800 pb-2">
+                        <h4 class="font-serif-elegant font-bold text-lg text-ink dark:text-white">Marcus T.</h4>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold">March 13, 2026</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                        Her comment about the monster making "small, rational compromises" is absolutely chilling. It completely recontextualizes her latest protagonist. Fantastic interview, Julian. I’ve already secured my ticket for the salon.
+                    </p>
+                    <button class="text-[9px] font-bold uppercase tracking-widest text-marigold hover:text-ink dark:hover:text-white transition-colors w-fit pt-2">
+                        Reply to Letter
+                    </button>
+                </div>
+
+                <div class="flex flex-col space-y-3">
+                    <div class="flex justify-between items-baseline border-b border-gray-200 dark:border-gray-800 pb-2">
+                        <h4 class="font-serif-elegant font-bold text-lg text-ink dark:text-white">Elena R.</h4>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-400 font-bold">March 14, 2026</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                        I've always wondered how journalists make the jump. The idea that pacing is about mapping what characters *don't* know is brilliant advice for any aspiring writer. Is there a waitlist for her workshop?
+                    </p>
+                    <button class="text-[9px] font-bold uppercase tracking-widest text-marigold hover:text-ink dark:hover:text-white transition-colors w-fit pt-2">
+                        Reply to Letter
+                    </button>
+                  
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

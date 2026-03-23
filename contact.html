@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images\logo.png">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Tactile Book Block Button */
+        .book-block-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+        }
+        .dark .book-block-btn {
+            border-color: #C2A878;
+            box-shadow: 4px 4px 0px 0px #eda726;
+        }
+        .book-block-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+
+        
+    </style>
+</head>
+<body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 bg-texture">
+
+    <div id="navbar"></div>
+
+    <section class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden">
+      
+      <div class="absolute inset-0 z-0">
+        <img src="images\img13.avif" 
+             alt="Bookstore Interior" 
+             class="w-full h-full object-cover object-center grayscale-[20%] animate-[subtle-zoom_20s_infinite_alternate]">
+        <div class="absolute inset-0 bg-black/60 dark:bg-black/80 transition-colors duration-500"></div>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-5xl animate-fade-in">
+        <span class="text-marigold font-bold tracking-[0.4em] uppercase text-xs sm:text-sm mb-6 block">
+          Inquiries & Gatherings
+        </span>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif-elegant font-bold text-white leading-[1.1] mb-8 tracking-tight">
+          Reach The <br class="hidden md:block" />
+          <span class="italic font-normal text-marigold">Bookora</span>
+        </h1>
+        
+        <p class="text-white/80 text-base md:text-xl max-w-2xl mx-auto leading-relaxed font-serif-elegant italic">
+          Whether you are hunting for a rare first edition, looking to host your book club, or simply want to share a story, our librarians are here to listen.
+        </p>
+      </div>
+
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center opacity-50 hover:opacity-100 transition-opacity duration-300">
+        <span class="text-[9px] uppercase tracking-[0.3em] text-white mb-4 font-bold font-sans">Scroll</span>
+        <div class="w-[1px] h-16 bg-gradient-to-b from-marigold to-transparent relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1/3 bg-white animate-scroll-line"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="py-16 md:py-24 bg-cream dark:bg-[#12100d] border-b border-antgold/20 transition-colors duration-500">
+      <div class="container mx-auto px-6 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white dark:bg-ink p-10 border border-antgold/20 shadow-sm text-center group hover:shadow-xl hover:border-marigold transition-all duration-500">
+            <div class="w-14 h-14 mx-auto rounded-full bg-cream dark:bg-[#1a1612] border border-antgold/30 flex items-center justify-center text-marigold mb-6 shadow-sm group-hover:bg-marigold group-hover:text-white transition-colors">
+              <i class="fas fa-book-reader text-xl"></i>
+            </div>
+            <h3 class="font-serif-elegant font-bold text-xl mb-3"> Librarian's Desk</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 font-sans">For book reservations, rare title sourcing, and general inquiries.</p>
+            <a href="mailto:desk@thebookora.com" class="text-marigold font-bold text-sm tracking-wide hover:underline font-sans">desk@bookora.com</a>
+          </div>
+
+          <div class="bg-white dark:bg-ink p-10 border border-antgold/20 shadow-sm text-center group hover:shadow-xl hover:border-marigold transition-all duration-500">
+            <div class="w-14 h-14 mx-auto rounded-full bg-cream dark:bg-[#1a1612] border border-antgold/30 flex items-center justify-center text-marigold mb-6 shadow-sm group-hover:bg-marigold group-hover:text-white transition-colors">
+              <i class="fas fa-mug-hot text-xl"></i>
+            </div>
+            <h3 class="font-serif-elegant font-bold text-xl mb-3">The Inkwell Cafe</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 font-sans">For book reservations, rare title sourcing, and general inquiries.</p>
+            <a href="tel:+18005557323" class="text-marigold font-bold text-sm tracking-wide hover:underline font-sans">+1 (800) 555-01</a>
+          </div>
+
+          <div class="bg-white dark:bg-ink p-10 border border-antgold/20 shadow-sm text-center group hover:shadow-xl hover:border-marigold transition-all duration-500">
+            <div class="w-14 h-14 mx-auto rounded-full bg-cream dark:bg-[#1a1612] border border-antgold/30 flex items-center justify-center text-marigold mb-6 shadow-sm group-hover:bg-marigold group-hover:text-white transition-colors">
+              <i class="fas fa-feather-alt text-xl"></i>
+            </div>
+            <h3 class="font-serif-elegant font-bold text-xl mb-3">Events & Press</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 font-sans">For book reservations, rare title sourcing, and general inquiries.</p>
+            <a href="mailto:events@thebookora.com" class="text-marigold font-bold text-sm tracking-wide hover:underline font-sans">events@bookora.com</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white dark:bg-black  duration-500">
+      <div class="container mx-auto px-6 lg:px-16">
+        <div class="bg-white dark:bg-[#12100d] shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-antgold/30">
+          
+          <div class="lg:w-2/5 relative min-h-[300px] lg:min-h-full bg-ink">
+            <img src="images\img16.avif" 
+                 alt="Writing a letter" 
+                 class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale-[20%]">
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-10 text-white z-10">
+              <h3 class="font-serif font-bold text-3xl mb-4">Send a Dispatch</h3>
+              <p class="text-gray-300 text-sm leading-relaxed font-serif ">
+                Tell us about the story you are looking for or the event you wish to host. Our head librarian typically responds within 1–2 business days.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:w-3/5 p-8 md:p-16">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-500 mb-2 font-sans">First Name</label>
+                  <input type="text" required class="w-full px-5 py-4 bg-cream dark:bg-ink border border-antgold/20 focus:border-marigold focus:ring-1 focus:ring-marigold text-ink dark:text-white outline-none font-sans text-sm transition-all">
+                </div>
+                <div>
+                  <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-500 mb-2 font-sans">Last Name</label>
+                  <input type="text" required class="w-full px-5 py-4 bg-cream dark:bg-ink border border-antgold/20 focus:border-marigold focus:ring-1 focus:ring-marigold text-ink dark:text-white outline-none font-sans text-sm transition-all">
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-500 mb-2 font-sans">Email Address</label>
+                <input type="email" required class="w-full px-5 py-4 bg-cream dark:bg-ink border border-antgold/20 focus:border-marigold focus:ring-1 focus:ring-marigold text-ink dark:text-white outline-none font-sans text-sm transition-all">
+              </div>
+
+              <div>
+                <label class="block text-[10px] uppercase tracking-widest font-bold text-gray-500 mb-2 font-sans">Your Message</label>
+                <textarea rows="5" required class="w-full px-5 py-4 bg-cream dark:bg-ink border border-antgold/20 focus:border-marigold focus:ring-1 focus:ring-marigold text-ink dark:text-white outline-none font-serif  text-sm resize-none transition-all" placeholder="Dear Librarian..."></textarea>
+              </div>
+
+              <button type="submit" class="book-block-btn w-full py-5 bg-marigold text-ink font-bold uppercase tracking-widest text-xs font-sans transition-all">
+                Send Dispatch 
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 md:py-32 bg-[#F8F3E8]/30 dark:bg-[#0a0a0a] transition-colors duration-500 relative overflow-hidden border-b border-[#C2A878]/20">
+    
+    <div class="absolute inset-0 opacity-40 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#eda726]/10 rounded-full blur-[150px] pointer-events-none translate-y-1/2 -translate-x-1/4"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
+            <div class="flex items-center justify-center space-x-3 mb-6">
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">The Practicalities</span>
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold tracking-tight mb-4 text-[#1a1612] dark:text-white">
+                Plan Your Visit
+            </h2>
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans max-w-md mx-auto">
+                Everything you need to know before stepping into our sanctuary.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[auto]">
+            
+            <div class="md:col-span-12 lg:col-span-8 relative overflow-hidden border border-[#C2A878]/30 group shadow-xl bg-white dark:bg-[#1a1612]">
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" 
+                         class="w-full h-full object-cover grayscale-[40%] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105 opacity-20 dark:opacity-40">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70 dark:from-[#1a1612] dark:via-[#1a1612]/95 dark:to-[#1a1612]/80"></div>
+                </div>
+                
+                <div class="relative z-10 p-8 md:p-12 flex flex-col md:flex-row gap-12 h-full text-[#1a1612] dark:text-white">
+                    <div class="flex-1">
+                        <i class="fas fa-map-marker-alt text-2xl text-[#C2A878] mb-6"></i>
+                        <h3 class="text-2xl font-serif-elegant font-bold mb-2">The Hub</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 font-sans leading-relaxed mb-6">
+                            1924 Antiquarian Way<br>
+                            Historic Arts District<br>
+                            New York, NY 10012
+                        </p>
+                        <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-[#eda726] border-b border-[#eda726] hover:text-[#1a1612] dark:hover:text-white transition-colors pb-1">
+                            Get Directions
+                        </a>
+                    </div>
+                    
+                    <div class="flex-1 border-t md:border-t-0 md:border-l border-[#C2A878]/30 pt-8 md:pt-0 md:pl-12">
+                        <i class="far fa-clock text-2xl text-[#C2A878] mb-6"></i>
+                        <h3 class="text-2xl font-serif-elegant font-bold mb-4">Hours of Operation</h3>
+                        <ul class="space-y-3 text-sm font-sans text-gray-600 dark:text-gray-300">
+                            <li class="flex justify-between border-b border-gray-200 dark:border-white/10 pb-2">
+                                <span>Monday — Thursday</span>
+                                <span class="text-[#eda726] font-bold">9:00 AM — 9:00 PM</span>
+                            </li>
+                            <li class="flex justify-between border-b border-gray-200 dark:border-white/10 pb-2">
+                                <span>Friday — Saturday</span>
+                                <span class="text-[#eda726] font-bold">9:00 AM — 11:00 PM</span>
+                            </li>
+                            <li class="flex justify-between pb-2">
+                                <span>Sunday</span>
+                                <span class="text-gray-400 italic">Members Only (10AM-5PM)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 lg:col-span-4 bg-white dark:bg-[#1a1612] text-[#1a1612] dark:text-white border border-[#C2A878]/30 p-8 md:p-10 hover:border-[#eda726]/50 transition-colors duration-500 shadow-xl group">
+                <div class="flex items-center gap-3 mb-8">
+                    <i class="fas fa-feather-alt text-[#eda726]"></i>
+                    <h3 class="text-xl font-serif-elegant font-bold">House Etiquette</h3>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C2A878] block mb-1">01. The Rule of Whispers</span>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed group-hover:text-[#1a1612] dark:group-hover:text-gray-300 transition-colors">The Grand Library is a strict quiet zone. Please take calls to the Café or the exterior courtyard.</p>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C2A878] block mb-1">02. Digital Disconnect</span>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed group-hover:text-[#1a1612] dark:group-hover:text-gray-300 transition-colors">Laptops are permitted only in designated areas of The Inkwell Café. Reading rooms are analog.</p>
+                    </div>
+                    <div>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.2em] text-[#C2A878] block mb-1">03. Outside Fare</span>
+                        <p class="text-xs text-gray-600 dark:text-gray-400 font-sans leading-relaxed group-hover:text-[#1a1612] dark:group-hover:text-gray-300 transition-colors">To protect our collection, outside food is not permitted. The Inkwell is happy to serve you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-6 lg:col-span-8 bg-white dark:bg-[#1a1612] text-[#1a1612] dark:text-white border border-[#C2A878]/30 p-8 md:p-10 flex flex-col justify-center hover:border-[#eda726]/50 transition-colors duration-500 shadow-xl">
+                <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-[#C2A878] mb-8 block font-sans">Available Amenities</span>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <i class="fas fa-wifi text-[#eda726] text-xl mb-2"></i>
+                        <span class="text-xs font-bold tracking-wider font-sans uppercase">Free Wi-Fi</span>
+                        <span class="text-[10px] text-gray-500 dark:text-gray-400">Café area only</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i class="fas fa-wheelchair text-[#eda726] text-xl mb-2"></i>
+                        <span class="text-xs font-bold tracking-wider font-sans uppercase">Fully Access</span>
+                        <span class="text-[10px] text-gray-500 dark:text-gray-400">Elevators to all floors</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i class="fas fa-door-closed text-[#eda726] text-xl mb-2"></i>
+                        <span class="text-xs font-bold tracking-wider font-sans uppercase">Coat Check</span>
+                        <span class="text-[10px] text-gray-500 dark:text-gray-400">Required for bags</span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <i class="fas fa-mug-hot text-[#eda726] text-xl mb-2"></i>
+                        <span class="text-xs font-bold tracking-wider font-sans uppercase">The Cafe</span>
+                        <span class="text-[10px] text-gray-500 dark:text-gray-400">Full espresso bar</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-12 lg:col-span-4 bg-[#eda726] text-[#1a1612] p-8 md:p-10 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:bg-[#1a1612] hover:text-[#eda726] dark:hover:bg-white dark:hover:text-[#1a1612] transition-colors duration-500 cursor-pointer shadow-xl border border-transparent hover:border-[#eda726]">
+                <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+                <div class="relative z-10">
+                    <i class="fas fa-ticket-alt text-3xl mb-4 transition-transform group-hover:scale-110"></i>
+                    <h3 class="text-2xl font-serif-elegant font-bold mb-2">Reserve a Day Pass</h3>
+                    <p class="text-xs font-sans font-medium mb-6 opacity-80 group-hover:opacity-100">Guarantee your seat in the Grand Library during peak weekend hours.</p>
+                    <span class="text-[10px] font-bold uppercase tracking-widest border-b-2 border-[#1a1612] group-hover:border-current pb-1 transition-colors">
+                        Book Now
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section class="py-24 bg-ink text-white relative overflow-hidden">
+
+        <div class="absolute inset-0 z-0">
+            <img src="images\img13.avif"
+                 alt="Library Gathering"
+                 class="w-full h-full object-cover grayscale-[50%]">
+            
+            <div class="absolute inset-0 bg-black/80"></div>
+        </div>
+
+        <div class="absolute inset-0 opacity-20 z-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-marigold rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-antgold rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            
+            <i class="fas fa-wine-glass-alt text-4xl text-marigold mb-8"></i>
+
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold mb-8">
+                Host Your Literary Gathering
+            </h2>
+
+            <p class="max-w-2xl mx-auto text-white/80 text-lg mb-12 font-serif">
+                Book our private reading rooms or the events gallery for your next book club meeting, poetry slam, or intimate workshop.
+            </p>
+
+            <a href="contact.html" class="inline-block book-block-btn px-12 py-5 bg-marigold text-ink font-bold uppercase tracking-widest text-xs font-sans">
+                Inquire About Venue
+            </a>
+
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

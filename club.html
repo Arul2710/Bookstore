@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Club</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="images\logo.png">
+
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    }
+                }
+            }
+        };
+    </script>
+    <body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 ">
+    
+    <div id="navbar"></div>
+    <section class="relative w-full min-h-[100svh] flex items-center justify-center bg-ink overflow-hidden pt-20">
+  
+  <div class="absolute inset-0 z-0 group">
+    <img src="images\bg5.avif" 
+         alt="Book club gathering" 
+         class="w-full h-full object-cover object-center  opacity-40 animate-[subtle-zoom_20s_infinite_alternate]">
+    
+    <div class="absolute inset-0 "></div>
+    <div class="absolute inset-0 "></div>
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 flex flex-col items-center text-center mt-8">
+
+    <div class="flex items-center justify-center space-x-4 mb-6 md:mb-8 animate-fade-in-up">
+      <span class="w-8 md:w-12 h-[1px] bg-marigold"></span>
+      <span class="uppercase tracking-[0.3em] text-[10px] md:text-xs font-bold text-antgold font-sans">The Bookora Societies</span>
+      <span class="w-8 md:w-12 h-[1px] bg-marigold"></span>
+    </div>
+
+    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-serif-elegant font-bold text-white leading-[1.1] mb-6 md:mb-8 tracking-tight animate-fade-in-up" style="animation-delay: 0.1s;">
+      Shared Stories. <br />
+      <span class="font-normal italic text-marigold">Shared Lives.</span>
+    </h1>
+
+    <p class="text-base md:text-lg font-medium text-gray-300 leading-relaxed max-w-2xl mx-auto mb-12 font-sans animate-fade-in-up" style="animation-delay: 0.2s;">
+      Reading is often a solitary act, but it doesn't have to end that way. Join our monthly gatherings to dissect, debate, and celebrate the season's most compelling narratives.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto animate-fade-in-up" style="animation-delay: 0.3s;">
+      
+      <a href="club.html" class="book-block-btn w-full sm:w-auto px-10 py-4 bg-marigold text-ink text-xs font-bold uppercase tracking-widest transition-all duration-300 font-sans text-center">
+        Find Your Club
+      </a>
+      
+      <a href="blog.html" class="group flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-widest text-white hover:text-marigold transition-colors font-sans w-full sm:w-auto py-4">
+        <span>View Current Reads</span>
+        <div class="relative w-8 h-[1px] bg-white overflow-hidden group-hover:bg-marigold transition-colors">
+          <div class="absolute inset-0 bg-marigold -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center opacity-60 animate-fade-in-up" style="animation-delay: 0.5s;">
+   
+  </div>
+
+</section>
+<section id="current-reads" class="py-24 md:py-32 bg-cream dark:bg-ink transition-colors duration-500 bg-texture border-b border-antgold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col items-center text-center mb-16 md:mb-24 gap-8">
+            <div class="max-w-xl">
+                <div class="flex items-center justify-center space-x-4 mb-6">
+                    <span class="w-8 h-[1px] bg-marigold"></span>
+                    <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">
+                        The Syllabus
+                    </span>
+                    <span class="w-8 h-[1px] bg-marigold"></span>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ink dark:text-white tracking-tight font-serif-elegant">
+                    This Month's Selections
+                </h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-7 flex flex-col md:flex-row gap-8 lg:gap-12 group">
+                
+                <div class="w-full sm:w-2/3 md:w-2/5 lg:w-1/2 mx-auto md:mx-0 shrink-0">
+                    <div class="relative aspect-[2/3] shadow-2xl overflow-hidden border border-antgold/20 transition-transform duration-500 hover:-translate-y-2">
+                        <img src="images\img12.avif" 
+                             alt="Featured Book Cover" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-ink text-marigold dark:bg-white dark:text-ink px-3 py-1 text-[9px] font-bold uppercase tracking-widest shadow-md">
+                            The Modern Classics Circle
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-3/5 lg:w-1/2 flex flex-col justify-center">
+                    <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-antgold font-sans mb-3 block">October Featured Read</span>
+                    <h3 class="text-3xl md:text-4xl font-serif-elegant font-bold text-ink dark:text-white mb-2">Glass Hotel</h3>
+                    <p class="text-sm font-sans font-bold text-gray-500 dark:text-gray-400 mb-6 uppercase tracking-widest">By Emily St. John Mandel</p>
+                    
+                    <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8">
+                        A captivating novel of money, beauty, white-collar crime, ghosts, and moral compromise in which a woman disappears from a container ship off the coast of Mauritania and a massive Ponzi scheme implodes in Manhattan.
+                    </p>
+                    
+                    <div class="bg-white/50 dark:bg-black/20 border border-antgold/30 p-4 mb-8">
+                        <p class="text-xs font-sans text-ink dark:text-white flex items-center gap-2 mb-2">
+                            <i class="far fa-calendar-alt text-marigold"></i> <strong>Meeting:</strong> Thursday, Oct 26 @ 7:00 PM
+                        </p>
+                        <p class="text-xs font-sans text-ink dark:text-white flex items-center gap-2">
+                            <i class="fas fa-map-marker-alt text-marigold"></i> <strong>Location:</strong> The Gallery Vault
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <button class="book-block-btn px-6 py-3 bg-marigold text-ink text-[10px] font-bold uppercase tracking-widest font-sans">
+                            Buy Book — $18
+                        </button>
+                        <a href="#" class="text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white hover:text-marigold border-b border-transparent hover:border-marigold transition-all pb-1 mt-2 sm:mt-0">
+                            RSVP to Event
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex flex-col border-t lg:border-t-0 lg:border-l border-antgold/20 pt-10 mt-20 lg:pt-0 lg:pl-12 xl:pl-16">
+                
+                <h4 class="text-xs font-bold uppercase tracking-widest text-gray-500 font-sans mb-6">Other Active Circles</h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 md:gap-6 lg:gap-10">
+                    
+                    <div class="flex gap-4 sm:gap-6 group cursor-pointer">
+                        <div class="w-20 sm:w-24 aspect-[2/3] shrink-0 shadow-lg overflow-hidden border border-antgold/20">
+                            <img src="images\img6.avif" alt="Book Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-[9px] font-bold uppercase tracking-widest text-marigold mb-1">The Non-Fiction Forum</span>
+                            <h4 class="text-lg font-serif-elegant font-bold text-ink dark:text-white mb-1 group-hover:text-antgold transition-colors">Braiding Sweetgrass</h4>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Robin Wall Kimmerer</p>
+                            <p class="text-xs font-sans text-ink dark:text-white"><i class="far fa-calendar-alt text-antgold mr-1"></i> Oct 18 @ 6:30 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 sm:gap-6 group cursor-pointer">
+                        <div class="w-20 sm:w-24 aspect-[2/3] shrink-0 shadow-lg overflow-hidden border border-antgold/20">
+                            <img src="images\img15.avif" alt="Book Cover" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="text-[9px] font-bold uppercase tracking-widest text-marigold mb-1">Midnight Mystery Readers</span>
+                            <h4 class="text-lg font-serif-elegant font-bold text-ink dark:text-white mb-1 group-hover:text-antgold transition-colors">The Guest List</h4>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-3">Lucy Foley</p>
+                            <p class="text-xs font-sans text-ink dark:text-white"><i class="far fa-calendar-alt text-antgold mr-1"></i> Oct 31 @ 8:00 PM</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="clubs" class="py-24 md:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 border-b border-antgold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 md:mb-24">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <span class="w-8 h-[1px] bg-marigold"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">Our Reading Circles</span>
+                <span class="w-8 h-[1px] bg-marigold"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold text-ink dark:text-white mb-6 tracking-tight">
+                Find Your Chapter
+            </h2>
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                Whether you prefer sweeping historical epics, gripping noir, or grounding non-fiction, we have a curated circle waiting for you. 
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            
+            <div class="group flex flex-col bg-cream/30 dark:bg-ink/50 border border-antgold/30 hover:border-marigold transition-all duration-500 p-8 md:p-10 shadow-sm hover:shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-marigold/5 rounded-bl-[100px] -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="flex items-center justify-between mb-8">
+                    <i class="fas fa-landmark text-2xl text-antgold group-hover:text-marigold transition-colors"></i>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-gray-500 bg-white dark:bg-ink px-3 py-1 border border-antgold/20">
+                        Waitlist Open
+                    </span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl font-serif-elegant font-bold text-ink dark:text-white mb-3">The Modern Classics</h3>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-antgold font-bold font-sans mb-6 border-b border-antgold/20 pb-4">Literary Fiction & Prize Winners</p>
+                
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8 flex-grow">
+                    Our flagship circle. We dive deep into the contemporary novels shaping modern literature, focusing on prose, thematic depth, and cultural impact.
+                </p>
+                
+                <ul class="space-y-3 mb-10 text-xs font-sans text-ink dark:text-white">
+                    <li class="flex items-center gap-3"><i class="far fa-clock text-marigold"></i> Meets Thursday of the Month</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-users text-marigold"></i> Intimate 15-Person Cap</li>
+                </ul>
+
+                <a href="#" class="w-full py-4 text-center border border-ink dark:border-white text-ink dark:text-white text-[10px] font-bold uppercase tracking-widest hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink transition-colors duration-300">
+                    Join the Waitlist
+                </a>
+            </div>
+
+            <div class="group flex flex-col bg-cream/30 dark:bg-ink/50 border border-antgold/30 hover:border-marigold transition-all duration-500 p-8 md:p-10 shadow-sm hover:shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-marigold/5 rounded-bl-[100px] -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="flex items-center justify-between mb-8">
+                    <i class="fas fa-search text-2xl text-antgold group-hover:text-marigold transition-colors"></i>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-ink bg-marigold px-3 py-1 border border-marigold">
+                        Accepting Members
+                    </span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl font-serif-elegant font-bold text-ink dark:text-white mb-3">Midnight Mystery</h3>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-antgold font-bold font-sans mb-6 border-b border-antgold/20 pb-4">Thrillers, Noir & True Crime</p>
+                
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8 flex-grow">
+                    A late-night gathering for those who love the architecture of suspense. We dissect alibis, unreliable narrators, and atmospheric tension.
+                </p>
+                
+                <ul class="space-y-3 mb-10 text-xs font-sans text-ink dark:text-white">
+                    <li class="flex items-center gap-3"><i class="far fa-clock text-marigold"></i> Meets Tuesday of the Month</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-users text-marigold"></i> Open Membership</li>
+                </ul>
+
+                <a href="#" class="w-full py-4 text-center border border-ink dark:border-white text-ink dark:text-white text-[10px] font-bold uppercase tracking-widest hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink transition-colors duration-300">
+                    Apply for Membership
+                </a>
+            </div>
+
+            <div class="group flex flex-col bg-cream/30 dark:bg-ink/50 border border-antgold/30 hover:border-marigold transition-all duration-500 p-8 md:p-10 shadow-sm hover:shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-marigold/5 rounded-bl-[100px] -z-10 transition-transform duration-500 group-hover:scale-110"></div>
+                
+                <div class="flex items-center justify-between mb-8">
+                    <i class="fas fa-globe-americas text-2xl text-antgold group-hover:text-marigold transition-colors"></i>
+                    <span class="text-[9px] font-bold uppercase tracking-widest text-ink bg-marigold px-3 py-1 border border-marigold">
+                        Accepting Members
+                    </span>
+                </div>
+                
+                <h3 class="text-2xl md:text-3xl font-serif-elegant font-bold text-ink dark:text-white mb-3">The Non-Fiction Forum</h3>
+                <p class="text-[10px] uppercase tracking-[0.2em] text-antgold font-bold font-sans mb-6 border-b border-antgold/20 pb-4">History, Memoirs & Essays</p>
+                
+                <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed mb-8 flex-grow">
+                    For the curious minds. We explore the real world through meticulously researched histories, profound memoirs, and groundbreaking scientific essays.
+                </p>
+                
+                <ul class="space-y-3 mb-10 text-xs font-sans text-ink dark:text-white">
+                    <li class="flex items-center gap-3"><i class="far fa-clock text-marigold"></i> Meets Wednesday of the Month</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-users text-marigold"></i> Open Membership</li>
+                </ul>
+
+                <a href="#" class="w-full py-4 text-center border border-ink dark:border-white text-ink dark:text-white text-[10px] font-bold uppercase tracking-widest hover:bg-ink hover:text-white dark:hover:bg-white dark:hover:text-ink transition-colors duration-300">
+                    Apply for Membership
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section class="py-24 md:py-32 bg-[#F8F3E8] dark:bg-[#12100d] transition-colors duration-500 bg-texture border-b border-[#C2A878]/20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-20 md:mb-28">
+            <div class="flex items-center justify-center space-x-4 mb-6">
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">The Experience</span>
+                <span class="w-8 h-[1px] bg-[#eda726]"></span>
+            </div>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-6 tracking-tight">
+                The Bookora Ritual
+            </h2>
+            <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                Joining a circle is simple. We handle the curation and the atmosphere; you bring your perspective.
+            </p>
+        </div>
+
+        <div class="relative">
+            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-[#C2A878]/30 -translate-x-1/2"></div>
+
+            <div class="space-y-16 md:space-y-24">
+                
+                <div class="flex flex-col md:flex-row items-center justify-between w-full group">
+                    <div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 md:pr-12">
+                        <span class="text-5xl font-serif-elegant italic text-gray-300 dark:text-gray-800 group-hover:text-[#eda726]/30 transition-colors duration-500 mb-2 block">01</span>
+                        <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Secure Your Copy</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                            Once you register for a circle, pick up the month's selection at The Hub. All active circle members receive a 15% courtesy discount on club titles.
+                        </p>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center relative z-10">
+                        <div class="w-4 h-4 rounded-full bg-[#F8F3E8] dark:bg-[#12100d] border-2 border-[#C2A878] group-hover:border-[#eda726] group-hover:bg-[#eda726] transition-all duration-500 shadow-[0_0_15px_rgba(237,167,38,0.3)]"></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-12"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between w-full group">
+                    <div class="md:w-5/12 text-center md:text-left mb-6 md:mb-0 md:pl-12">
+                        <span class="text-5xl font-serif-elegant italic text-gray-300 dark:text-gray-800 group-hover:text-[#eda726]/30 transition-colors duration-500 mb-2 block">02</span>
+                        <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Read & Reflect</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                            Take the month to immerse yourself in the narrative. We provide a curated bookmark with three optional guiding questions to frame your reading.
+                        </p>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center relative z-10">
+                        <div class="w-4 h-4 rounded-full bg-[#F8F3E8] dark:bg-[#12100d] border-2 border-[#C2A878] group-hover:border-[#eda726] group-hover:bg-[#eda726] transition-all duration-500 shadow-[0_0_15px_rgba(237,167,38,0.3)]"></div>
+                    </div>
+                    <div class="md:w-5/12 md:pr-12"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-between w-full group">
+                    <div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 md:pr-12">
+                        <span class="text-5xl font-serif-elegant italic text-gray-300 dark:text-gray-800 group-hover:text-[#eda726]/30 transition-colors duration-500 mb-2 block">03</span>
+                        <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">Gather in the Gallery</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                            Meet your circle in the private Gallery Vault. The Inkwell Café provides complimentary drip coffee and artisanal teas for all attendees.
+                        </p>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center relative z-10">
+                        <div class="w-4 h-4 rounded-full bg-[#F8F3E8] dark:bg-[#12100d] border-2 border-[#C2A878] group-hover:border-[#eda726] group-hover:bg-[#eda726] transition-all duration-500 shadow-[0_0_15px_rgba(237,167,38,0.3)]"></div>
+                    </div>
+                    <div class="md:w-5/12 md:pl-12"></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row-reverse items-center justify-between w-full group">
+                    <div class="md:w-5/12 text-center md:text-left mb-6 md:mb-0 md:pl-12">
+                        <span class="text-5xl font-serif-elegant italic text-gray-300 dark:text-gray-800 group-hover:text-[#eda726]/30 transition-colors duration-500 mb-2 block">04</span>
+                        <h3 class="text-2xl font-serif-elegant font-bold text-[#1a1612] dark:text-white mb-3">The Discourse</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 font-sans leading-relaxed">
+                            A guided, two-hour conversation led by one of our literary curators. Expect respectful debate, shared epiphanies, and a deeper connection to the text.
+                        </p>
+                    </div>
+                    <div class="hidden md:flex w-2/12 justify-center relative z-10">
+                        <div class="w-4 h-4 rounded-full bg-[#F8F3E8] dark:bg-[#12100d] border-2 border-[#C2A878] group-hover:border-[#eda726] group-hover:bg-[#eda726] transition-all duration-500 shadow-[0_0_15px_rgba(237,167,38,0.3)]"></div>
+                    </div>
+                    <div class="md:w-5/12 md:pr-12"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="py-24 md:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-500 border-b border-[#C2A878]/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+      <div class="flex flex-col items-center text-center mb-16 md:mb-24 gap-8">
+    
+    <div class="max-w-xl">
+        <div class="flex items-center justify-center space-x-4 mb-6">
+            <span class="w-8 h-[1px] bg-[#eda726]"></span>
+            <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-[#C2A878] font-sans">
+                Member Reflections
+            </span>
+            <span class="w-8 h-[1px] bg-[#eda726]"></span>
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-bold text-[#1a1612] dark:text-white tracking-tight font-serif-elegant">
+            Voices from the Circle
+        </h2>
+    </div>
+
+</div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+            
+            <div class="flex flex-col relative group">
+                <div class="relative z-10">
+                    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-serif-elegant italic leading-relaxed mb-6">
+                        "It is rare to find a space where people actually listen to one another. The Modern Classics circle has easily become the most intellectually stimulating two hours of my month."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-[#C2A878]/30 pt-4">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#1a1612]">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale" alt="Member">
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#1a1612] dark:text-white font-sans uppercase tracking-widest">Eleanor V.</h4>
+                            <p class="text-[10px] text-gray-500 font-sans mt-1">Member since 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col relative group">
+                <div class="relative z-10">
+                    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-serif-elegant italic leading-relaxed mb-6">
+                        "It is rare to find a space where people actually listen to one another. The Modern Classics circle has easily become the most intellectually stimulating two hours of my month."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-[#C2A878]/30 pt-4">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#1a1612]">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale" alt="Member">
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#1a1612] dark:text-white font-sans uppercase tracking-widest">James M.</h4>
+                            <p class="text-[10px] text-gray-500 font-sans mt-1">Member since 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col relative group">
+                <div class="relative z-10">
+                    <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 font-serif-elegant italic leading-relaxed mb-6">
+                        "It is rare to find a space where people actually listen to one another. The Modern Classics circle has easily become the most intellectually stimulating two hours of my month."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-[#C2A878]/30 pt-4">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-[#1a1612]">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale" alt="Member">
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold text-[#1a1612] dark:text-white font-sans uppercase tracking-widest">Clara T.</h4>
+                            <p class="text-[10px] text-gray-500 font-sans mt-1">Member since 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-24 md:py-32 lg:py-40 bg-[#1a1612] text-white text-center relative overflow-hidden">
+    
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=2000&auto=format&fit=crop" 
+             alt="Library ambiance" 
+             class="w-full h-full object-cover grayscale-[50%] opacity-20">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1a1612] via-[#1a1612]/90 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6">
+        
+        <i class="fas fa-key text-4xl text-[#C2A878] mb-8 opacity-80"></i>
+        
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif-elegant font-bold mb-6 leading-[1.1] tracking-tight">
+            Already have a <br />
+            <span class="italic font-normal text-[#eda726]">Private Chapter?</span>
+        </h2>
+        
+        <p class="text-gray-300 text-base md:text-lg mb-10 font-sans font-light leading-relaxed">
+            You don't have to meet in a living room. Reserve The Gallery Vault or a private corner of The Inkwell for your own established book club's monthly gatherings. 
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-6 font-sans">
+            <a href="contact.html" class="book-block-btn w-full sm:w-auto px-10 py-4 bg-[#eda726] text-[#1a1612] text-xs font-bold uppercase tracking-widest transition-all duration-300">
+                Inquire About Venue Space
+            </a>
+            
+            <a href="club.html" class="group flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-white hover:text-[#eda726] transition-colors font-sans w-full sm:w-auto py-4 justify-center">
+                <span>Or Join Our Circles</span>
+                <i class="fas fa-arrow-up text-[10px] group-hover:-translate-y-1 transition-transform"></i>
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+        <div id="footer"></div>
+    
+    <script src="navbar.js"></script>
+    <script src="footer.js"></script>
+</body>
+</html>

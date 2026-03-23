@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found </title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images\logo.png">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        marigold: '#eda726',
+                        antgold: '#C2A878',
+                        cream: '#F8F3E8',
+                        ink: '#1a1612',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        body { font-family: 'Poppins', sans-serif; }
+        .font-serif-elegant { font-family: 'Playfair Display', serif; }
+
+        * { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+
+        /* Subtle Paper Texture */
+        .bg-texture {
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        /* Tactile Button */
+        .book-block-btn {
+            border: 2px solid #1a1612;
+            box-shadow: 4px 4px 0px 0px #C2A878;
+        }
+        .dark .book-block-btn {
+            border-color: #C2A878;
+            box-shadow: 4px 4px 0px 0px #eda726;
+        }
+        .book-block-btn:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 bg-texture overflow-hidden">
+
+    <section class="relative min-h-screen flex items-center justify-center px-4 sm:px-6">
+
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=2000&auto=format&fit=crop" 
+                 alt="Library Archive" 
+                 class="w-full h-full object-cover ">
+            <div class="absolute inset-0 bg-black/70 "></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-2xl opacity-0 animate-fade-in-up">
+
+            <div class="mb-8 flex justify-center">
+                <div class="w-16 h-16 border border-antgold/40 flex items-center justify-center rotate-45 bg-white/50 dark:bg-ink/50 backdrop-blur-sm shadow-lg">
+                    <i class="fas fa-book-dead text-2xl text-marigold -rotate-45"></i>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <span class="w-8 h-[1px] bg-marigold"></span>
+                <span class="uppercase tracking-[0.3em] text-[10px] font-bold text-antgold font-sans">Error 404</span>
+                <span class="w-8 h-[1px] bg-marigold"></span>
+            </div>
+
+            <h1 class="text-[120px] sm:text-[150px] md:text-[180px] font-extrabold font-serif-elegant text-white dark:text-white leading-none tracking-tighter mb-2">
+                404
+            </h1>
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif-elegant font-bold text-white dark:text-white mb-6">
+                Out of <span class="italic text-marigold font-normal">Print.</span>
+            </h2>
+
+            <p class="text-sm md:text-base text-gray-300 dark:text-gray-400 font-sans leading-relaxed max-w-md mx-auto mb-10">
+                It appears the manuscript you are searching for has been misfiled or lost to the archives. Let us guide you back to the main collection.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 w-full sm:w-auto">
+                
+                <a href="index.html"
+                   class="book-block-btn w-full sm:w-auto px-10 py-4 bg-marigold text-ink text-[10px] font-bold uppercase tracking-widest transition-all duration-300 font-sans flex items-center justify-center gap-2">
+                    <i class="fas fa-long-arrow-alt-left text-xs"></i> Return to Bookora
+                </a>
+
+                <a href="blog.html"
+                   class="group w-full sm:w-auto px-6 py-4 text-[10px] font-bold uppercase tracking-widest text-ink dark:text-white border border-antgold/30 hover:border-marigold transition-colors font-sans bg-white/30 dark:bg-ink/30 backdrop-blur-sm flex items-center justify-center gap-2">
+                    Browse Archives <i class="fas fa-search text-marigold group-hover:scale-110 transition-transform"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
