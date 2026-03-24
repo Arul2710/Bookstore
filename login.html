@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Login - The Bookora</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
-      <link rel="icon" href="images\logo.png">
+  <link rel="icon" href="images\logo.png">
    
   <script>
     tailwind.config = {
@@ -28,29 +28,20 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
 
-    body { font-family: 'Poppins', sans-serif; }
+    body { font-family: 'Poppins', sans-serif; overflow: hidden; } /* Prevents page scroll */
     .font-serif-elegant { font-family: 'Playfair Display', serif; }
 
     * {
       transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
     }
 
-    /* Subtle Paper Texture */
-    .bg-texture {
-        background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-    }
-
     /* RTL Support */
     html[dir="rtl"] .lg\:flex-row { flex-direction: row-reverse; }
-
-    /* Layout Constraints */
-    @media (max-width: 1023px) { .promo-side { display: none !important; } }
-    @media (min-width: 1024px) { #main-card { height: 650px; } }
 
     /* Global Toggles Positioning */
     .global-toggles {
       position: absolute;
-      top: 1.5rem;
+      top: 1rem;
       right: 1.5rem;
       z-index: 100;
       display: flex;
@@ -59,15 +50,14 @@
     html[dir="rtl"] .global-toggles { right: auto; left: 1.5rem; }
 
     .toggle-btn {
-      width: 2.75rem;
-      height: 2.75rem;
+      width: 2.5rem;
+      height: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: rgba(248, 243, 232, 0.9);
       border: 1px solid rgba(194, 168, 120, 0.4);
       border-radius: 2px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       backdrop-filter: blur(4px);
     }
     .dark .toggle-btn {
@@ -76,7 +66,6 @@
     }
     .toggle-btn i { color: #eda726; }
 
-    /* Tactile Book Block Button */
     .book-block-btn {
       border: 2px solid #1a1612;
       box-shadow: 4px 4px 0px 0px #C2A878;
@@ -89,119 +78,98 @@
       transform: translate(2px, 2px);
       box-shadow: 0px 0px 0px 0px transparent;
     }
-    
-    @media(max-width:420px){
-        #main-card{ margin-top: 30px !important; }
+
+    /* Scaling for small laptops */
+    @media (max-height: 750px) {
+        #main-card { transform: scale(0.9); }
     }
   </style>
 </head>
-<body class="antialiased min-h-screen flex items-center justify-center p-4 bg-cream dark:bg-ink transition-colors duration-500 text-ink dark:text-white relative ">
+<body class="antialiased h-screen flex items-center justify-center p-4 bg-cream dark:bg-ink text-ink dark:text-white relative">
 
   <div class="global-toggles">
-    <button id="rtl-toggle" class="toggle-btn  transition-colors" aria-label="Toggle RTL">
+    <button id="rtl-toggle" class="toggle-btn transition-colors" aria-label="Toggle RTL">
       <i class="fas fa-language"></i>
     </button>
-    <button id="theme-toggle" class="toggle-btn  transition-colors" aria-label="Toggle theme">
+    <button id="theme-toggle" class="toggle-btn transition-colors" aria-label="Toggle theme">
       <i id="theme-icon" class="fas fa-moon"></i>
     </button>
   </div>
 
-  <div id="main-card" class="w-full max-w-5xl rounded-sm overflow-hidden relative bg-white dark:bg-[#12100d] border border-antgold/30 shadow-2xl flex flex-col lg:flex-row z-10">
+  <div id="main-card" class="w-full max-w-5xl max-h-[90vh] rounded-sm overflow-hidden relative bg-white dark:bg-[#12100d] border border-antgold/30 shadow-2xl flex flex-col lg:flex-row z-10">
     
-    <div id="login-panel" class="w-full lg:w-1/2 p-8 sm:p-12 flex flex-col justify-center">
+    <div id="login-panel" class="w-full lg:w-1/2 p-6 sm:p-10 flex flex-col justify-center overflow-y-auto">
 
-     <div class="flex flex-col items-center text-center">
-
-  <!-- Logo -->
-  <div class="logo flex justify-center mt-6">
-    <a href="index.html" class="flex items-center gap-3 group shrink-0">
-      <div class="w-1.5 h-8 bg-marigold rounded-full"></div>
-      <div class="flex flex-col items-start">
-        <span class="text-lg font-serif font-black tracking-widest uppercase text-ink dark:text-white leading-none">
-          THE <span class="text-marigold">BOOKORA</span>
-        </span>
-        <span class="text-[8px] tracking-[0.3em] uppercase text-antgold font-bold mt-1">
+      <div class="flex flex-col items-center text-center">
+        <div class="logo flex justify-center mb-4">
+          <a href="index.html" class="flex items-center gap-3 group shrink-0">
+            <div class="w-1 h-6 bg-marigold rounded-full"></div>
+            <div class="flex flex-col items-start">
+              <span class="text-lg font-serif font-black tracking-widest uppercase text-ink dark:text-white leading-none">
+                THE <span class="text-marigold">BOOKORA</span>
+              </span>
+                    <span class="text-[8px] tracking-[0.3em] uppercase text-antgold font-bold mt-1">
           Community Hub
         </span>
+            </div>
+          </a>
+        </div>
+
+        <h2 class="text-xl font-serif font-bold text-ink dark:text-white mb-1">Enter The Sanctuary</h2>
+        <p class="text-gray-500 dark:text-gray-400 mb-6 text-xs font-medium">Access your reading lists.</p>
       </div>
-    </a>
-  </div>
 
-  <!-- Heading -->
-  <h2 class="text-xl sm:text-2xl mt-8 font-serif-elegant font-bold text-ink dark:text-white mb-2">
-    Enter The Sanctuary
-  </h2>
-
-  <!-- Paragraph -->
-  <p class="text-gray-500 dark:text-gray-400 mb-8 text-sm font-medium max-w-sm">
-    Access your reading lists.
-  </p>
-
-</div>
-
-
-      <form class="space-y-5">
-        
+      <form class="space-y-4">
         <div>
-          <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-2 block">Email Address</label>
+          <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-1 block">Email Address</label>
           <input type="email" placeholder="reader@thebookora.com"
-                 class="w-full px-4 py-3 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold focus:ring-1 focus:ring-marigold transition-all font-serif  text-sm">
+                 class="w-full px-3 py-2.5 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all font-serif text-sm">
         </div>
 
         <div>
-          <div class="flex justify-between items-center mb-2">
-            <label class="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400">Password</label>
-          </div>
+          <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-1 block">Password</label>
           <input type="password" placeholder="········"
-                 class="w-full px-4 py-3 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold focus:ring-1 focus:ring-marigold transition-all tracking-widest">
-        
-    <div class="flex items-center justify-between mb-6">
-
-  <!-- Remember Me -->
-  <label class="flex items-center mt-5 gap-2 text-xs text-gray-600 dark:text-gray-400 font-medium cursor-pointer">
-    <input type="checkbox" class="accent-marigold w-4 h-4">
-    Remember Me
-  </label>
-
-  <!-- Forgot Password -->
-  <a href="#" class="text-[10px] uppercase tracking-widest font-bold mt-5 text-marigold hover:text-ink dark:hover:text-white transition-colors">
-    Forgot Password?
-  </a>
-
-</div>
-
+                 class="w-full px-3 py-2.5 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all tracking-widest text-sm">
+          
+          <div class="flex items-center justify-between mt-3">
+            <label class="flex items-center gap-2 text-[10px] text-gray-600 dark:text-gray-400 font-medium cursor-pointer">
+              <input type="checkbox" class="accent-marigold w-3.5 h-3.5">
+              Remember Me
+            </label>
+            <a href="#" class="text-[9px] uppercase tracking-widest font-bold text-marigold hover:underline">
+              Forgot Password?
+            </a>
+          </div>
         </div>
 
-        <button class="book-block-btn w-full bg-marigold text-ink py-4 font-bold uppercase tracking-widest text-xs transition-all duration-300 mt-4">
-         Log In
+        <button class="book-block-btn w-full bg-marigold text-ink py-3 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 mt-2">
+          Log In
         </button>
 
-        <div class="relative my-8">
+        <div class="relative my-4">
           <div class="border-t border-antgold/20"></div>
-          <span class="absolute left-1/2 -translate-x-1/2 -top-2.5 bg-white dark:bg-[#12100d] px-4 text-gray-400 text-[9px] font-bold uppercase tracking-widest">
+          <span class="absolute left-1/2 -translate-x-1/2 -top-2 bg-white dark:bg-[#12100d] px-4 text-gray-400 text-[8px] font-bold uppercase tracking-widest">
             or read with
           </span>
         </div>
 
-        <div class="flex gap-4">
-          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:border-marigold hover:bg-marigold/5 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
-            <i class="fab fa-google text-marigold text-sm"></i> Google
+        <div class="flex gap-3">
+          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:bg-marigold/5 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
+            <i class="fab fa-google text-marigold text-xs"></i> Google
           </button>
-          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:border-marigold hover:bg-marigold/5 py-3 rounded-sm text-[10px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
-            <i class="fab fa-apple text-marigold text-sm"></i> Apple
+          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:bg-marigold/5 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
+            <i class="fab fa-apple text-marigold text-xs"></i> Apple
           </button>
         </div>
 
-        <p class="text-center py-5 text-gray-500 pt-6 text-xs font-medium">
+        <p class="text-center text-gray-500 pt-2 text-[11px] font-medium">
           New to the library? 
           <a href="signup.html" class="text-marigold font-bold hover:text-ink dark:hover:text-white transition-colors border-b border-marigold pb-0.5">Sign up now</a>
         </p>
-
       </form>
     </div>
 
-    <div class="promo-side w-full lg:w-1/2 relative overflow-hidden flex flex-col justify-end p-12 border-l border-antgold/20">
-      
+    <div class="promo-side hidden lg:flex w-1/2 relative overflow-hidden flex-col justify-end p-10 border-l border-antgold/20">
       <div class="absolute inset-0 z-0">
         <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop" 
              alt="Library Interior" 
@@ -210,43 +178,29 @@
       </div>
 
       <div class="relative z-10 text-white">
-        
-        <div class="inline-block px-4 py-1.5 border border-antgold/50 bg-ink/60 backdrop-blur-md mb-6">
-          <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-marigold">
+        <div class="inline-block px-3 py-1 border border-antgold/50 bg-ink/60 backdrop-blur-sm mb-4">
+          <span class="text-[9px] font-bold tracking-[0.2em] uppercase text-marigold">
             <i class="fas fa-feather-alt mr-2"></i>The Literary Standard
           </span>
         </div>
 
-        <h3 class="text-3xl md:text-4xl font-serif font-bold mb-6 leading-[1.2]">
-          Curating Stories, <br><span class="italic text-antgold font-normal">Building Community.</span>
+        <h3 class="text-2xl md:text-3xl font-serif font-bold mb-4 leading-tight">
+          Curating Stories, <br><span class="italic text-antgold font-normal text-xl">Building Community.</span>
         </h3>
 
-        <div class="space-y-4 text-sm mb-10 text-gray-300 font-serif ">
-          <p class="flex items-center gap-3">
-            <i class="fas fa-check text-marigold text-xs"></i>
-            <span>Exclusive access to rare first editions & pre-launches</span>
-          </p>
-          <p class="flex items-center gap-3">
-            <i class="fas fa-check text-marigold text-xs"></i>
-            <span>Reserve priority seating at author reading events</span>
-          </p>
-          <p class="flex items-center gap-3">
-            <i class="fas fa-check text-marigold text-xs"></i>
-            <span>Join private monthly genre-specific book clubs</span>
-          </p>
-          <p class="flex items-center gap-3">
-            <i class="fas fa-check text-marigold text-xs"></i>
-            <span>Enjoy 10% off artisanal brews at The Inkwell Café</span>
-          </p>
+        <div class="space-y-2 text-xs mb-8 text-gray-300 font-serif ">
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Exclusive access to rare editions</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Priority seating at events</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Private monthly book clubs</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>10% off at The Inkwell Café</span></p>
         </div>
 
-        <div class="bg-white/10 backdrop-blur-md inline-flex items-center px-6 py-3 border border-white/20">
-          <div class="flex text-marigold text-xs mr-3">
+        <div class="bg-white/10 backdrop-blur-sm inline-flex items-center px-4 py-2 border border-white/20">
+          <div class="flex text-marigold text-[9px] mr-2">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
-          <span class="text-[10px] font-bold uppercase tracking-widest text-white">Join 5,000+ Avid Readers</span>
+          <span class="text-[9px] font-bold uppercase tracking-widest text-white">Join 5,000+ Readers</span>
         </div>
-
       </div>
     </div>
 
@@ -258,17 +212,6 @@
     const rtlToggle = document.getElementById("rtl-toggle");
     const htmlElement = document.documentElement;
 
-    function applyTheme() {
-      let theme = localStorage.getItem('bookora-dark') || 'light';
-      if (theme === 'dark' || theme === 'true') {
-        htmlElement.classList.add('dark');
-        themeIcon.className = 'fas fa-sun';
-      } else {
-        htmlElement.classList.remove('dark');
-        themeIcon.className = 'fas fa-moon';
-      }
-    }
-
     themeToggle.addEventListener("click", () => {
       const isDark = htmlElement.classList.toggle('dark');
       localStorage.setItem('bookora-dark', isDark ? 'dark' : 'light');
@@ -277,15 +220,14 @@
 
     rtlToggle.addEventListener("click", () => {
       const currentDir = htmlElement.getAttribute("dir");
-      const newDir = currentDir === "rtl" ? "ltr" : "rtl";
-      htmlElement.setAttribute("dir", newDir);
-      localStorage.setItem("bookora-rtl", newDir);
+      htmlElement.setAttribute("dir", currentDir === "rtl" ? "ltr" : "rtl");
     });
 
     (function init() {
-      applyTheme();
-      const savedRTL = localStorage.getItem("bookora-rtl");
-      if (savedRTL) htmlElement.setAttribute("dir", savedRTL);
+      if (localStorage.getItem('bookora-dark') === 'dark') {
+        htmlElement.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+      }
     })();
   </script>
 

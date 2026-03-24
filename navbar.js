@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <a href="about.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">About</a>
-        <a href="blog.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Literary Blog</a>
-        <a href="hub.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">The Hub</a>
+        <a href="blog.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Blog</a>
+        <a href="hub.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Hub</a>
         <a href="events.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Events</a>
-        <a href="club.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Book Club</a>
+        <a href="club.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Club</a>
         <a href="workshop.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Workshops</a>
         <a href="contact.html" class="nav-link px-3 py-2 text-gray-800 dark:text-gray-200">Contact</a>
       </div>
@@ -72,9 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         <a href="about.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">About</a>
-        <a href="blog.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Literary Blog</a>
-        <a href="hub.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">The Hub</a>
+        <a href="blog.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Blog</a>
+        <a href="hub.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Hub</a>
         <a href="events.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Events</a>
+                <a href="club.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Club</a>
+
         <a href="workshop.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Workshops</a>
         <a href="contact.html" class="mobile-link py-4 border-b border-[#C2A87820] text-gray-900 dark:text-white">Contact</a>
       </div>
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </button>
         </div>
         <div class="flex flex-col gap-4 font-serif">
-          <a href="login.html" class="w-full py-4 text-center border-2 border-[#eda726] text-gray-900 dark:text-white font-bold uppercase text-xs tracking-widest">Log In</a>
+          <a href="login.html" class="w-full py-4 text-center bg-[#eda726] text-white font-bold uppercase text-xs tracking-widest">Log In</a>
           <a href="signup.html" class="w-full py-4 text-center bg-[#eda726] text-white font-bold uppercase text-xs tracking-widest">Sign Up</a>
         </div>
       </div>
