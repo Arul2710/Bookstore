@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div class="hidden xl:flex items-center gap-4 shrink-0">
-        <div class="flex items-center gap-1 bg-[#EBE4D5] dark:bg-[#2a241e] p-1 rounded-sm border border-[#C2A87830]">
-          <button id="rtlToggle" class="w-9 h-8 flex items-center justify-center text-[10px] font-bold text-gray-600 dark:text-gray-400 hover:text-[#eda726]">RTL</button>
-          <button id="darkToggle" class="w-9 h-8 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-[#eda726]">
+        <div class="flex items-center gap-2">
+          <button id="rtlToggle" class="w-9 h-8 flex items-center justify-center bg-[#EBE4D5] dark:bg-[#2a241e] border border-[#C2A87830] rounded-sm text-[10px] font-bold text-gray-600 dark:text-gray-400 hover:text-[#eda726] transition-all">RTL</button>
+          <button id="darkToggle" class="w-9 h-8 flex items-center justify-center bg-[#EBE4D5] dark:bg-[#2a241e] border border-[#C2A87830] rounded-sm text-gray-600 dark:text-gray-400 hover:text-[#eda726] transition-all">
             <i id="darkIcon" class="fas fa-moon"></i>
           </button>
         </div>
@@ -82,12 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div class="btns mt-auto pt-8 flex flex-col gap-6">
-        <div class="flex items-center justify-around bg-[#EBE4D5] dark:bg-[#2a241e] p-3 rounded-md border border-[#C2A87830]">
-          <button id="mobileRtlToggle" class="flex items-center font-serif gap-2 font-bold text-gray-600 dark:text-gray-400">
+        <div class="flex items-center gap-4">
+          <button id="mobileRtlToggle" class="flex-1 flex items-center justify-center gap-3 bg-[#EBE4D5] dark:bg-[#2a241e] p-4 rounded-md border border-[#C2A87830] font-serif font-bold text-gray-600 dark:text-gray-400 hover:text-[#eda726] transition-all">
             <i class="fas fa-language text-xl"></i> RTL Mode
           </button>
-          <div class="w-px h-6 bg-[#C2A87840]"></div>
-          <button id="mobileDarkToggle" class="flex items-center font-serif gap-2 font-bold text-gray-600 dark:text-gray-400">
+          <button id="mobileDarkToggle" class="flex-1 flex items-center justify-center gap-3 bg-[#EBE4D5] dark:bg-[#2a241e] p-4 rounded-md border border-[#C2A87830] font-serif font-bold text-gray-600 dark:text-gray-400 hover:text-[#eda726] transition-all">
             <i id="mobileDarkIcon" class="fas fa-moon text-xl"></i> Theme
           </button>
         </div>

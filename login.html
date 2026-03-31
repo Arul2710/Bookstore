@@ -1,91 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - The Bookora</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+  <link rel="stylesheet" href="./dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="images\logo.png">
-   
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            marigold: '#eda726',
-            antgold: '#C2A878',
-            cream: '#F8F3E8',
-            ink: '#1a1612',
-          }
-        }
-      }
-    }
-  </script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
-
-    body { font-family: 'Poppins', sans-serif; overflow: hidden; } /* Prevents page scroll */
-    .font-serif-elegant { font-family: 'Playfair Display', serif; }
-
-    * {
-      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    /* RTL Support */
-    html[dir="rtl"] .lg\:flex-row { flex-direction: row-reverse; }
-
-    /* Global Toggles Positioning */
-    .global-toggles {
-      position: absolute;
-      top: 1rem;
-      right: 1.5rem;
-      z-index: 100;
-      display: flex;
-      gap: 0.75rem;
-    }
-    html[dir="rtl"] .global-toggles { right: auto; left: 1.5rem; }
-
-    .toggle-btn {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(248, 243, 232, 0.9);
-      border: 1px solid rgba(194, 168, 120, 0.4);
-      border-radius: 2px;
-      backdrop-filter: blur(4px);
-    }
-    .dark .toggle-btn {
-      background-color: rgba(26, 22, 18, 0.9);
-      border-color: rgba(194, 168, 120, 0.2);
-    }
-    .toggle-btn i { color: #eda726; }
-
-    .book-block-btn {
-      border: 2px solid #1a1612;
-      box-shadow: 4px 4px 0px 0px #C2A878;
-    }
-    .dark .book-block-btn {
-      border-color: #C2A878;
-      box-shadow: 4px 4px 0px 0px #eda726;
-    }
-    .book-block-btn:hover {
-      transform: translate(2px, 2px);
-      box-shadow: 0px 0px 0px 0px transparent;
+    body {
+      overflow: hidden;
     }
 
     /* Scaling for small laptops */
     @media (max-height: 750px) {
-        #main-card { transform: scale(0.9); }
+      #main-card {
+        transform: scale(0.9);
+      }
     }
   </style>
 </head>
-<body class="antialiased h-screen flex items-center justify-center p-4 bg-cream dark:bg-ink text-ink dark:text-white relative">
+
+<body
+  class="antialiased h-screen flex items-center justify-center p-4 bg-cream dark:bg-ink text-ink dark:text-white relative">
 
   <div class="global-toggles">
     <button id="rtl-toggle" class="toggle-btn transition-colors" aria-label="Toggle RTL">
@@ -96,8 +36,9 @@
     </button>
   </div>
 
-  <div id="main-card" class="w-full max-w-5xl max-h-[90vh] rounded-sm overflow-hidden relative bg-white dark:bg-[#12100d] border border-antgold/30 shadow-2xl flex flex-col lg:flex-row z-10">
-    
+  <div id="main-card"
+    class="w-full max-w-5xl max-h-[90vh] rounded-sm overflow-hidden relative bg-white dark:bg-[#12100d] border border-antgold/30 shadow-2xl flex flex-col lg:flex-row z-10">
+
     <div id="login-panel" class="w-full lg:w-1/2 p-6 sm:p-10 flex flex-col justify-center overflow-y-auto">
 
       <div class="flex flex-col items-center text-center">
@@ -105,12 +46,13 @@
           <a href="index.html" class="flex items-center gap-3 group shrink-0">
             <div class="w-1 h-6 bg-marigold rounded-full"></div>
             <div class="flex flex-col items-start">
-              <span class="text-lg font-serif font-black tracking-widest uppercase text-ink dark:text-white leading-none">
+              <span
+                class="text-lg font-serif font-black tracking-widest uppercase text-ink dark:text-white leading-none">
                 THE <span class="text-marigold">BOOKORA</span>
               </span>
-                    <span class="text-[8px] tracking-[0.3em] uppercase text-antgold font-bold mt-1">
-          Community Hub
-        </span>
+              <span class="text-[8px] tracking-[0.3em] uppercase text-antgold font-bold mt-1">
+                Community Hub
+              </span>
             </div>
           </a>
         </div>
@@ -119,61 +61,76 @@
         <p class="text-gray-500 dark:text-gray-400 mb-6 text-xs font-medium">Access your reading lists.</p>
       </div>
 
-      <form class="space-y-4">
+      <form id="login-form" class="space-y-6">
         <div>
-          <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-1 block">Email Address</label>
+          <label
+            class="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-2 block">Email
+            Address</label>
           <input type="email" placeholder="reader@thebookora.com"
-                 class="w-full px-3 py-2.5 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all font-serif text-sm">
+            class="w-full px-4 py-3 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all font-serif text-sm">
         </div>
 
-        <div>
-          <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-1 block">Password</label>
-          <input type="password" placeholder="········"
-                 class="w-full px-3 py-2.5 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all tracking-widest text-sm">
-          
-          <div class="flex items-center justify-between mt-3">
-            <label class="flex items-center gap-2 text-[10px] text-gray-600 dark:text-gray-400 font-medium cursor-pointer">
-              <input type="checkbox" class="accent-marigold w-3.5 h-3.5">
+        <div class="form-group pb-2">
+          <label
+            class="text-[11px] uppercase tracking-[0.2em] font-bold text-gray-500 dark:text-gray-400 mb-2 block">Password</label>
+          <div class="relative">
+            <input id="password" type="password" placeholder="········"
+              class="w-full px-4 py-3 border rounded-sm bg-cream dark:bg-ink border-antgold/30 text-ink dark:text-white focus:outline-none focus:border-marigold transition-all tracking-widest text-sm">
+            <button type="button" id="togglePassword" class="password-toggle">
+              <i class="far fa-eye"></i>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between mt-4">
+            <label
+              class="flex items-center gap-2 text-[11px] text-gray-600 dark:text-gray-400 font-medium cursor-pointer">
+              <input type="checkbox" class="accent-marigold w-4 h-4">
               Remember Me
             </label>
-            <a href="#" class="text-[9px] uppercase tracking-widest font-bold text-marigold hover:underline">
+            <a href="#" class="text-[10px] uppercase tracking-widest font-bold text-marigold hover:underline">
               Forgot Password?
             </a>
           </div>
         </div>
 
-        <button class="book-block-btn w-full bg-marigold text-ink py-3 font-bold uppercase tracking-widest text-[10px] transition-all duration-300 mt-2">
+        <button
+          class="hover:bg-white hover:border-2 hover:border-marigold hover:text-black w-full bg-marigold text-white py-4 font-bold uppercase tracking-widest text-[12px] transition-all duration-300 mt-2">
           Log In
         </button>
 
         <div class="relative my-4">
           <div class="border-t border-antgold/20"></div>
-          <span class="absolute left-1/2 -translate-x-1/2 -top-2 bg-white dark:bg-[#12100d] px-4 text-gray-400 text-[8px] font-bold uppercase tracking-widest">
+          <span
+            class="absolute left-1/2 -translate-x-1/2 -top-2 bg-white dark:bg-[#12100d] px-4 text-gray-400 text-[8px] font-bold uppercase tracking-widest">
             or read with
           </span>
         </div>
 
-        <div class="flex gap-3">
-          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:bg-marigold/5 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
-            <i class="fab fa-google text-marigold text-xs"></i> Google
+        <div class="flex gap-4 mt-2">
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-3 border border-antgold/30 hover:bg-marigold/10 py-3 rounded-sm text-[11px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white group">
+            <i class="fab fa-google text-marigold text-sm group-hover:scale-110 transition-transform"></i> Google
           </button>
-          <button type="button" class="flex-1 flex items-center justify-center gap-2 border border-antgold/30 hover:bg-marigold/5 py-2 rounded-sm text-[9px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white">
-            <i class="fab fa-apple text-marigold text-xs"></i> Apple
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-3 border border-antgold/30 hover:bg-marigold/10 py-3 rounded-sm text-[11px] font-bold uppercase tracking-widest transition-colors text-ink dark:text-white group">
+            <i class="fab fa-apple text-marigold text-sm group-hover:scale-110 transition-transform"></i> Apple
           </button>
         </div>
 
         <p class="text-center text-gray-500 pt-2 text-[11px] font-medium">
-          New to the library? 
-          <a href="signup.html" class="text-marigold font-bold hover:text-ink dark:hover:text-white transition-colors border-b border-marigold pb-0.5">Sign up now</a>
+          New to the library?
+          <a href="signup.html"
+            class="text-marigold font-bold hover:text-ink dark:hover:text-white transition-colors border-b border-marigold pb-0.5">Sign
+            up now</a>
         </p>
       </form>
     </div>
 
-    <div class="promo-side hidden lg:flex w-1/2 relative overflow-hidden flex-col justify-end p-10 border-l border-antgold/20">
+    <div
+      class="promo-side hidden lg:flex w-1/2 relative overflow-hidden flex-col justify-end p-10 border-l border-antgold/20">
       <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop" 
-             alt="Library Interior" 
-             class="w-full h-full object-cover grayscale-[30%]">
+        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1000&auto=format&fit=crop"
+          alt="Library Interior" class="w-full h-full object-cover grayscale-[30%]">
         <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/20"></div>
       </div>
 
@@ -189,15 +146,20 @@
         </h3>
 
         <div class="space-y-2 text-xs mb-8 text-gray-300 font-serif ">
-          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Exclusive access to rare editions</span></p>
-          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Priority seating at events</span></p>
-          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Private monthly book clubs</span></p>
-          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>10% off at The Inkwell Café</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Exclusive
+              access to rare editions</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Priority
+              seating at events</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>Private monthly
+              book clubs</span></p>
+          <p class="flex items-center gap-2"><i class="fas fa-check text-marigold text-[10px]"></i><span>10% off at The
+              Inkwell Café</span></p>
         </div>
 
         <div class="bg-white/10 backdrop-blur-sm inline-flex items-center px-4 py-2 border border-white/20">
           <div class="flex text-marigold text-[9px] mr-2">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <span class="text-[9px] font-bold uppercase tracking-widest text-white">Join 5,000+ Readers</span>
         </div>
@@ -223,6 +185,17 @@
       htmlElement.setAttribute("dir", currentDir === "rtl" ? "ltr" : "rtl");
     });
 
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+
+    togglePassword.addEventListener('click', function() {
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      const icon = this.querySelector('i');
+      icon.classList.toggle('fa-eye');
+      icon.classList.toggle('fa-eye-slash');
+    });
+
     (function init() {
       if (localStorage.getItem('bookora-dark') === 'dark') {
         htmlElement.classList.add('dark');
@@ -232,4 +205,5 @@
   </script>
 
 </body>
+
 </html>

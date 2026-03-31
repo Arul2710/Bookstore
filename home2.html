@@ -5,64 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home 2 | The Bookora</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="icon" href="images\logo.png">
-
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        marigold: '#eda726',
-                        antgold: '#C2A878',
-                        cream: '#F8F3E8',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
-        
-        body { font-family: 'Poppins', sans-serif; }
-        .font-serif-elegant { font-family: 'Playfair Display', serif; }
-
-        /* Smooth entry animation */
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-up { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-
-        /* Paper Texture */
-        .bg-texture {
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-        }
-
-        /* Navbar & Menu Styles */
-        .nav-link { position: relative; }
-        .nav-link::after {
-          content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px;
-          background: #eda726; transition: width 0.3s ease;
-        }
-        .nav-link:hover::after { width: 100%; }
-        #mobileMenu.hidden { display: none; }
-        #mobileMenu:not(.hidden) { display: flex; }
-        body.menu-open { overflow: hidden; }
-
-        /* Hover Reveal for Collection Cards */
-        .collection-card:hover .collection-overlay { opacity: 1; }
-        .collection-card:hover img { transform: scale(1.05); }
-        @media(max-width:420px){
-            .search{
-                display:none !important;
-            }
-        }
-    </style>
+    <link rel="icon" href="images\logo.png">
 </head>
 <body class="bg-cream dark:bg-[#1a1612] transition-colors duration-500 bg-texture">
     
@@ -392,61 +337,6 @@
     </section>
 
     <div id="footer"></div>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // --- NAVBAR LOGIC ---
-        const homeBtn = document.getElementById("homeBtn");
-        const homeMenu = document.getElementById("homeMenu");
-        const mobileBtn = document.getElementById("mobileBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const mobileIcon = document.getElementById("mobileIcon");
-        const mobileHomeBtn = document.getElementById("mobileHomeBtn");
-        const mobileHomeMenu = document.getElementById("mobileHomeMenu");
-        const mobileHomeIcon = document.getElementById("mobileHomeIcon");
-
-        homeBtn?.addEventListener("click", (e) => { e.stopPropagation(); homeMenu?.classList.toggle("hidden"); });
-        mobileHomeBtn?.addEventListener("click", () => {
-          const isHidden = mobileHomeMenu.classList.toggle("hidden");
-          mobileHomeIcon.style.transform = isHidden ? "rotate(0deg)" : "rotate(180deg)";
-        });
-
-        mobileBtn.onclick = () => {
-          const isHidden = mobileMenu.classList.toggle("hidden");
-          document.body.classList.toggle("menu-open");
-          mobileIcon.className = isHidden ? "fas fa-bars text-2xl" : "fas fa-times text-2xl";
-        };
-
-        document.addEventListener("click", () => homeMenu?.classList.add("hidden"));
-
-        // --- THEME LOGIC ---
-        const themeToggles = [document.getElementById("darkToggle"), document.getElementById("mobileDarkToggle")];
-        const updateIcons = (isDark) => {
-          const iconClass = isDark ? "fas fa-sun" : "fas fa-moon";
-          if (document.getElementById("darkIcon")) document.getElementById("darkIcon").className = iconClass;
-          if (document.getElementById("mobileDarkIcon")) document.getElementById("mobileDarkIcon").className = iconClass + " text-lg";
-        };
-
-        themeToggles.forEach(btn => btn?.addEventListener("click", () => {
-          const isDark = document.documentElement.classList.toggle("dark");
-          localStorage.setItem("bookora-dark", isDark);
-          updateIcons(isDark);
-        }));
-
-        // --- RTL LOGIC ---
-        const rtlToggles = [document.getElementById("rtlToggle"), document.getElementById("mobileRtlToggle")];
-        rtlToggles.forEach(btn => btn?.addEventListener("click", () => {
-          const isRtl = document.documentElement.dir === "rtl";
-          document.documentElement.dir = isRtl ? "ltr" : "rtl";
-        }));
-
-        if (localStorage.getItem("bookora-dark") === "true") {
-          document.documentElement.classList.add("dark");
-          updateIcons(true);
-        }
-      });
-    </script>
-    <script src="footer.js"></script>
     
     <script src="navbar.js"></script>
     <script src="footer.js"></script>

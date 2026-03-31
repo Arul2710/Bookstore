@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <footer class="w-full duration-300 
   bg-[#F8F3E8] dark:bg-[#1a1612] 
   border-t-[4px]" 
-  style="border-top-color: #eda726;">
+>
   
   <div class="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-12 grid-cols-1 md:grid-cols-12">
 

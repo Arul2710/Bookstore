@@ -5,67 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops </title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <link rel="icon" href="images\logo.png">
-
-
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        marigold: '#eda726',
-                        antgold: '#C2A878',
-                        cream: '#F8F3E8',
-                        ink: '#1a1612',
-                    }
-                }
-            }
-        };
-    </script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
-
-        body { font-family: 'Poppins', sans-serif; }
-        .font-serif-elegant { font-family: 'Playfair Display', serif; }
-
-        /* Subtle Paper Texture */
-        .bg-texture {
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-        }
-
-        /* Infinite Marquee Animation */
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 30s linear infinite;
-        }
-
-        /* Hover Zoom for Bento Box */
-        .bento-image { transition: transform 0.7s ease; }
-        .bento-card:hover .bento-image { transform: scale(1.05); }
-
-        /* Tactile Button */
-        .book-btn {
-            border: 2px solid #1a1612;
-            box-shadow: 4px 4px 0px 0px #C2A878;
-            transition: all 0.3s ease;
-        }
-        .dark .book-btn { border-color: #C2A878; box-shadow: 4px 4px 0px 0px #eda726; }
-        .book-btn:hover { transform: translate(4px, 4px); box-shadow: 0px 0px 0px 0px transparent; }
-        @media(max-width:420px){
-            .topic{
-                    margin-right: 45px !important;
-            }
-        }
-    </style>
+    <link rel="icon" href="images\logo.png">
 </head>
 <body class="bg-cream dark:bg-ink text-ink dark:text-white transition-colors duration-500 ">
     
