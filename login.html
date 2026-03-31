@@ -6,14 +6,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - The Bookora</title>
 
-  <link rel="stylesheet" href="./dist/output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="images\logo.png">
 
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            marigold: '#eda726',
+            antgold: '#C2A878',
+            cream: '#F8F3E8',
+            ink: '#1a1612',
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+
     body {
+      font-family: 'Poppins', sans-serif;
       overflow: hidden;
     }
+
+    /* Prevents page scroll */
+    .font-serif-elegant {
+      font-family: 'Playfair Display', serif;
+    }
+
+    * {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* RTL Support */
+    html[dir="rtl"] .lg\:flex-row {
+      flex-direction: row-reverse;
+    }
+
+    /* Global Toggles Positioning */
+    .global-toggles {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      z-index: 100;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    html[dir="rtl"] .global-toggles {
+      right: auto;
+      left: 1.5rem;
+    }
+
+    .toggle-btn {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(248, 243, 232, 0.9);
+      border: 1px solid rgba(194, 168, 120, 0.4);
+      border-radius: 2px;
+      backdrop-filter: blur(4px);
+    }
+
+    .dark .toggle-btn {
+      background-color: rgba(26, 22, 18, 0.9);
+      border-color: rgba(194, 168, 120, 0.2);
+    }
+
+    .toggle-btn i {
+      color: #eda726;
+    }
+
+    .book-block-btn {
+      border: 2px solid #1a1612;
+      box-shadow: 4px 4px 0px 0px #C2A878;
+    }
+
+    .dark .book-block-btn {
+      border-color: #C2A878;
+      box-shadow: 4px 4px 0px 0px #eda726;
+    }
+
+    .book-block-btn:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0px 0px transparent;
+    }
+
+    .password-toggle {
+        position: absolute;
+        right: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #C2A878;
+        cursor: pointer;
+        transition: color 0.3s;
+        border: none;
+        background: transparent;
+    }
+    .password-toggle:hover { color: #eda726; }
 
     /* Scaling for small laptops */
     @media (max-height: 750px) {
